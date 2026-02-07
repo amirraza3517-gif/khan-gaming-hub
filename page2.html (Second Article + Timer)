@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking Rewards | Step 2</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body onclick="window.open('verify.html', '_blank')" class="bg-gray-50 h-screen overflow-hidden">
+    <div class="bg-blue-600 text-white p-3 text-center font-bold">Step 2/3: Server Connecting...</div>
+    
+    <main class="p-6 text-center">
+        <h2 class="text-lg font-bold mb-4">Latest Gaming News: How to get Free Bundles</h2>
+        
+        <div class="my-6">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579809279" data-ad-format="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <div id="timer" class="text-2xl font-black text-red-600 my-4 italic">Wait <span id="count">10</span>s...</div>
+        <p class="text-xs text-gray-500 italic">Click anywhere on screen to verify instantly!</p>
+    </main>
+
+    <script>
+        let c = 10;
+        setInterval(() => {
+            if(c > 0) { c--; document.getElementById('count').innerText = c; }
+            else { window.location.href = 'verify.html'; }
+        }, 1000);
+    </script>
+</body>
+</html>
