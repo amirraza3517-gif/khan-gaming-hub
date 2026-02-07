@@ -3,63 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Fire Diamonds Guide - Khan Gaming</title>
+    <title>Gaming Rewards - Step <span id="stepTitle">1</span></title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .content-section { background: white; color: #334155; padding: 20px; border-radius: 20px; text-align: left; line-height: 1.6; }
-        .ad-placeholder { background: #f8fafc; border: 1px dashed #cbd5e1; padding: 15px; margin: 15px 0; text-align: center; font-size: 10px; color: #94a3b8; }
-        h2 { font-weight: bold; font-size: 18px; color: #1e40af; margin-top: 15px; }
+        .article-box { background: white; color: #334155; padding: 25px; border-radius: 25px; text-align: left; }
+        .ad-space { background: #f1f5f9; border: 1px dashed #cbd5e1; padding: 15px; margin: 15px 0; text-align: center; font-size: 10px; color: #94a3b8; border-radius: 10px; }
     </style>
 </head>
 <body class="bg-[#0b1120] p-4 font-sans text-slate-100">
     <div class="max-w-md mx-auto">
-        <div class="ad-placeholder italic">ADVERTISEMENT</div>
+        <div class="ad-space italic">ADVERTISEMENT #1</div>
 
-        <div class="content-section shadow-2xl">
-            <h1 class="text-2xl font-black text-slate-900 mb-4">Free Fire Max Diamonds Kaise Le?</h1>
-            <p class="text-sm italic mb-4">Doston, aaj kal har koi Free Fire mein free diamonds lena chahta hai taaki wo naye emotes aur skins nikal sake...</p>
+        <div class="article-box shadow-2xl">
+            <h1 id="artTitle" class="text-xl font-black text-blue-700 mb-3">Loading...</h1>
+            <p id="artBody" class="text-sm leading-relaxed mb-4">Please wait, loading next gaming tip...</p>
             
-            <div class="ad-placeholder italic">SPONSORED LINK</div>
-
-            <h2>1. Redeem Codes ka Istemal</h2>
-            <p class="text-[13px]">Garena har mahine naye redeem codes nikaalta hai. In codes ko FF Reward site par ja kar claim karna hota hai. Hamari site aapko wahi secret codes deti hai.</p>
-            <h2>2. In-Game Events aur Missions</h2>
-            <p class="text-[13px]">Agar aap rozana game khelte hain, toh aapko pata hoga ki bahut saare events aate hain jisme thode diamonds kharch karke ya free mein missions poore karke rewards milte hain.</p>
-
-            <div class="ad-placeholder italic">ADVERTISEMENT</div>
-
-            <h2>3. Third Party Apps se Bachkar Rahein</h2>
-            <p class="text-[13px]">Kayi saari sites aapka account hack kar sakti hain. Isliye hamesha trusted platforms ka hi istemal karein. Khan Gaming Hub aapko safe aur secure tarika batata hai.</p>
-            <div class="my-6 p-5 bg-blue-50 border-2 border-blue-200 rounded-2xl text-center">
-                <p class="text-[11px] font-bold text-blue-800 uppercase mb-2">💎 Your Diamond Code is Unlocking:</p>
-                <div id="count" class="text-4xl font-black text-blue-600">00:30</div>
+            <div class="ad-space italic font-bold text-blue-400">🔥 SPONSORED LINK 🔥</div>
+            <div class="my-6 p-4 bg-slate-50 border-2 border-blue-100 rounded-2xl text-center">
+                <p class="text-[10px] font-bold text-slate-400 uppercase">Next Step Unlocking In:</p>
+                <div id="countDown" class="text-4xl font-black text-blue-600">00:15</div>
             </div>
-            <button id="getBtn" disabled class="w-full bg-slate-300 text-white font-black py-4 rounded-xl shadow-lg cursor-not-allowed pointer-events-none uppercase text-lg">
-                Please Read Article First...
-            </button>
-
-            <div class="ad-placeholder italic">ADVERTISEMENT</div>
-
-            <p class="text-[12px] mt-4 text-slate-400">Disclaimer: Ye site sirf jankari ke liye hai. Hum kisi bhi tarah ke hacking ko promote nahi karte hain.</p>
+            <a href="#" id="nextBtn" class="block w-full bg-slate-200 text-slate-400 font-black py-4 rounded-xl text-center pointer-events-none cursor-not-allowed uppercase">
+                Read Article to Continue
+            </a>
+            <div class="ad-space italic mt-4">ADVERTISEMENT #2</div>
         </div>
     </div>
-    <script>
-        let seconds = 30; // 30 second ka timer rakha hai taki log content padhen
-        const timerDiv = document.getElementById('count');
-        const btn = document.getElementById('getBtn');
+<script>
+    const articles = [
+        { t: "Diamonds Kaise Le?", b: "Free Fire mein diamonds lene ke liye redeem codes sabse best tarika hai. Rozana naye codes aate hain." },
+        { t: "Pro Setting Guide", b: "Gaming mein sensitivity setting bahut matter karti hai. Headshot marne ke liye setting sahi rakhein." },
+        { t: "New Emotes Update", b: "Aglo mahine naye legendary emotes aane wale hain jo aapko event mein milenge." },
+        { t: "Best Character Skills", b: "Alok aur K character ki skills ka combination aapko har match jita sakta hai." },
+        { t: "Free Skins Secret", b: "Skins lene ke liye hamesha official events ka intezar karein, hack tools se bachein." },
+        { t: "Rank Push Tips", b: "Rank push karne ke liye hamesha map ke kinare utrein aur survival par dhayan dein." },
+        { t: "Gold Royale Rewards", b: "Gold royale mein naye bundles aaye hain, apne gold coins ko sahi jagah use karein." },
+        { t: "Pet Skills Combo", b: "Mr. Waggor pet aapko unlimited gloo walls de sakta hai, ise hamesha saath rakhein." },
+        { t: "Update News 2026", b: "Naya OB update aane wala hai jisme naya map aur weapons add honge." },
+        { t: "Final Step Verification", b: "Aapne saare steps poore kar liye hain. Ab aap apna code claim kar sakte hain!" }
+    ];
+    const urlParams = new URLSearchParams(window.location.search);
+    let currentPage = parseInt(urlParams.get('p')) || 1;
+    
+    // Article set karna
+    document.getElementById('artTitle').innerText = articles[currentPage-1].t;
+    document.getElementById('artBody').innerText = articles[currentPage-1].b;
+    document.getElementById('stepTitle').innerText = currentPage;
 
-        const timer = setInterval(() => {
-            seconds--;
-            timerDiv.innerText = "00:" + (seconds < 10 ? "0" + seconds : seconds);
-            if (seconds <= 0) {
-                clearInterval(timer);
-                timerDiv.innerText = "READY!";
-                btn.innerText = "GET REDEEM CODE";
-                btn.classList.remove('bg-slate-300', 'pointer-events-none');
-                btn.classList.add('bg-blue-600', 'hover:bg-blue-700', 'animate-bounce');
-                btn.onclick = () => { alert('Aapka Code: KHAN-FF-88-MAX'); };
+    let timeLeft = 15;
+    const timerDiv = document.getElementById('countDown');
+    const btn = document.getElementById('nextBtn');
+
+    const interval = setInterval(() => {
+        timeLeft--;
+        timerDiv.innerText = "00:" + (timeLeft < 10 ? "0" + timeLeft : timeLeft);
+        if (timeLeft <= 0) {
+            clearInterval(interval);
+            timerDiv.innerText = "READY!";
+            btn.innerText = (currentPage < 10) ? "GO TO STEP " + (currentPage + 1) : "GET FINAL CODE";
+            btn.classList.remove('bg-slate-200', 'text-slate-400', 'pointer-events-none');
+            btn.classList.add('bg-blue-600', 'text-white', 'hover:bg-blue-700');
+            
+            // Loop Logic: Agar 10th page hai toh wapas 1 par ya final page par
+            if (currentPage < 10) {
+                btn.href = "page2.html?p=" + (currentPage + 1);
+            } else {
+                btn.href = "page2.html?p=1"; // Loop back to Page 1
             }
-        }, 1000);
-    </script>
+        }
+    }, 1000);
+</script>
 </body>
 </html>
