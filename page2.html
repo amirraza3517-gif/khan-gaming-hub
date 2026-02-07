@@ -3,79 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming Rewards - Step <span id="stepTitle">1</span></title>
+    <title>Gaming - Step <span id="stepTitle">1</span></title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
     <style>
-        .article-box { background: white; color: #334155; padding: 25px; border-radius: 25px; text-align: left; shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
-        .ad-space { background: #f1f5f9; border: 1px dashed #cbd5e1; padding: 15px; margin: 15px 0; text-align: center; font-size: 10px; color: #94a3b8; border-radius: 12px; }
+        .article-box { background: white; color: #334155; padding: 25px; border-radius: 30px; text-align: center; } 
+        .ad-space { background: #f8fafc; border: 1px dashed #e2e8f0; padding: 15px; margin: 15px 0; color: #94a3b8; border-radius: 12px; font-size: 10px; }
     </style>
 </head>
-<body class="bg-[#0b1120] p-4 font-sans text-slate-100">
-    <div class="max-w-md mx-auto">
+<body class="bg-[#0b1120] p-4 flex items-center justify-center min-h-screen">
+    <div class="max-w-md w-full">
         <div class="ad-space italic">ADVERTISEMENT #1</div>
-
-        <div class="article-box shadow-2xl">
-            <h1 id="artTitle" class="text-xl font-black text-blue-700 mb-3 tracking-tight">Loading...</h1>
-            <p id="artBody" class="text-sm leading-relaxed mb-4">Please wait, loading next gaming tip...</p>
-
-            <div class="ad-space italic font-bold text-blue-400">🔥 SPONSORED LINK 🔥</div>
-
-            <div class="my-6 p-6 bg-slate-50 border-2 border-blue-100 rounded-2xl text-center">
-                <p class="text-[10px] font-bold text-slate-400 uppercase">Next Step Unlocking In:</p>
-                <div id="countDown" class="text-4xl font-black text-blue-600">00:15</div>
+        <div class="article-box shadow-2xl border-t-8 border-blue-600">
+            <h1 id="artTitle" class="text-xl font-black text-blue-700 mb-2 uppercase italic">Loading...</h1>
+            <p id="artBody" class="text-sm text-slate-500 mb-6">Loading tips...</p>
+            <div class="my-6 p-6 bg-slate-50 border-2 border-blue-100 rounded-3xl shadow-inner">
+                <div id="countDown" class="text-5xl font-black text-blue-600">00:15</div>
             </div>
-
-            <a href="#" id="nextBtn" class="block w-full bg-slate-200 text-slate-400 font-black py-4 rounded-xl text-center pointer-events-none uppercase transition-all">
-                Read Article to Continue
-            </a>
+            <a href="#" id="nextBtn" class="block w-full bg-slate-200 text-slate-400 font-black py-4 rounded-2xl pointer-events-none uppercase shadow-lg">Read to Continue</a>
+            <div class="ad-space italic mt-4">ADVERTISEMENT #2</div>
         </div>
-        <div class="ad-space italic mt-4">ADVERTISEMENT #2</div>
     </div>
 <script>
     const articles = [
-        { t: "Diamonds Kaise Le?", b: "Free Fire mein diamonds lene ke liye redeem codes sabse best tarika hai. Rozana naye codes aate hain." },
-        { t: "Pro Setting Guide", b: "Gaming mein sensitivity setting bahut matter karti hai. Headshot marne ke liye setting sahi rakhein." },
-        { t: "New Emotes Update", b: "Agle mahine naye legendary emotes aane wale hain jo aapko event mein milenge." },
-        { t: "Best Character Skills", b: "Alok aur K character ki skills ka combination aapko har match jita sakta hai." },
-        { t: "Free Skins Secret", b: "Skins lene ke liye hamesha official events ka intezar karein, hack tools se bachein." },
-        { t: "Rank Push Tips", b: "Rank push karne ke liye hamesha map ke kinare utrein aur survival par dhyan dein." },
-        { t: "Gold Royale Rewards", b: "Gold royale mein naye bundles aaye hain, apne gold coins ko sahi jagah use karein." },
-        { t: "Pet Skills Combo", b: "Mr. Waggor pet aapko unlimited gloo walls de sakta hai, ise hamesha saath rakhein." },
-        { t: "Update News 2026", b: "Naya OB update aane wala hai jisme naya map aur weapons add honge." },
-        { t: "Final Step Verification", b: "Aapne saare steps poore kar liye hain. Ab aap apna code claim kar sakte hain!" }
+        { t: "1. Diamond Tips", b: "Free Fire diamonds lene ke liye hamesha official redeem codes use karein." },
+        { t: "2. Headshot Setting", b: "Sensitivity 100 rakhein aur custom HUD ko apne hisab se set karein." },
+        { t: "3. Best Pet Skills", b: "Waggor pet aapko gloo wall deta hai jo end zone mein bahut kaam aata hai." },
+        { t: "4. Rank Push", b: "Grandmaster ke liye hamesha squad ke saath khele aur survival par focus karein." },
+        { t: "5. Free Bundles", b: "Luck Royale vouchers save karein aur bade events par hi unka use karein." },
+        { t: "6. Character Combo", b: "Alok aur Kelly ka combination fast movement ke liye sabse best hai." },
+        { t: "7. Gun Skins", b: "Hamesha rate-of-fire wali skins use karein, isse damage zyada padta hai." },
+        { t: "8. Update News", b: "Naya OB update aane wala hai jisme naye map aur gun changes honge." },
+        { t: "9. Avoid Hack", b: "Kisi bhi hack ya script ka use na karein, account ban ho sakta hai." },
+        { t: "10. Final Step", b: "Mubarak ho! Aapne 10 steps pure kiye. Reward niche claim karein." }
     ];
 </script>
 <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    let currentPage = parseInt(urlParams.get('p')) || 1;
-
-    // Title aur Content set karna
-    document.getElementById('artTitle').innerText = articles[currentPage-1].t;
-    document.getElementById('artBody').innerText = articles[currentPage-1].b;
-    document.getElementById('stepTitle').innerText = currentPage;
-
-    let timeLeft = 15;
-    const timerDiv = document.getElementById('countDown');
+    const params = new URLSearchParams(window.location.search);
+    let p = parseInt(params.get('p')) || 1;
+    document.getElementById('artTitle').innerText = articles[p-1].t;
+    document.getElementById('artBody').innerText = articles[p-1].b;
+    let time = 15;
     const btn = document.getElementById('nextBtn');
-
-    const interval = setInterval(() => {
-        timeLeft--;
-        timerDiv.innerText = "00:" + (timeLeft < 10 ? "0" + timeLeft : timeLeft);
-        
-        if (timeLeft <= 0) {
-            clearInterval(interval);
-            timerDiv.innerText = "READY!";
-            btn.innerText = (currentPage < 10) ? "GO TO STEP " + (currentPage + 1) : "GET FINAL CODE";
+    const timer = setInterval(() => {
+        time--;
+        document.getElementById('countDown').innerText = "00:" + (time < 10 ? "0" + time : time);
+        if (time <= 0) {
+            clearInterval(timer);
+            document.getElementById('countDown').innerText = "READY!";
+            btn.innerText = (p < 10) ? "GO TO STEP " + (p + 1) : "GET YOUR CODE";
             btn.classList.remove('bg-slate-200', 'text-slate-400', 'pointer-events-none');
-            btn.classList.add('bg-blue-600', 'text-white', 'hover:bg-blue-700');
-
-            // Loop Logic: Agar 10th page hai toh wapas 1 par
-            if (currentPage < 10) {
-                btn.href = "page2.html?p=" + (currentPage + 1);
-            } else {
-                btn.href = "page2.html?p=1"; 
-            }
+            btn.classList.add('bg-blue-600', 'text-white');
+            btn.href = (p < 10) ? "page2.html?p=" + (p + 1) : "page2.html?p=1";
         }
     }, 1000);
 </script>
