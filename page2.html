@@ -3,60 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming - Step <span id="stepTitle">1</span></title>
+    <title>Gaming Rewards - Step <span id="stTitle">1</span></title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
     <style>
-        .article-box { background: white; color: #334155; padding: 25px; border-radius: 30px; text-align: center; } 
-        .ad-space { background: #f8fafc; border: 1px dashed #e2e8f0; padding: 15px; margin: 15px 0; color: #94a3b8; border-radius: 12px; font-size: 10px; }
+        .box-card { background: white; border-radius: 30px; padding: 20px; color: #1e293b; border-top: 6px solid #2563eb; margin-bottom: 20px; }
+        .dl-item { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 15px; padding: 12px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .ad-space { background: #f1f5f9; border: 1px dashed #cbd5e1; padding: 10px; margin: 10px 0; color: #94a3b8; font-size: 10px; border-radius: 10px; text-align: center; }
     </style>
 </head>
-<body class="bg-[#0b1120] p-4 flex items-center justify-center min-h-screen">
-    <div class="max-w-md w-full">
+<body class="bg-[#0b1120] p-4 font-sans text-slate-100">
+    <div class="max-w-md mx-auto">
         <div class="ad-space italic">ADVERTISEMENT #1</div>
-        <div class="article-box shadow-2xl border-t-8 border-blue-600">
-            <h1 id="artTitle" class="text-xl font-black text-blue-700 mb-2 uppercase italic">Loading...</h1>
-            <p id="artBody" class="text-sm text-slate-500 mb-6">Loading tips...</p>
-            <div class="my-6 p-6 bg-slate-50 border-2 border-blue-100 rounded-3xl shadow-inner">
-                <div id="countDown" class="text-5xl font-black text-blue-600">00:15</div>
+
+        <div class="box-card shadow-xl">
+            <h2 class="text-sm font-black text-blue-600 uppercase mb-3 italic">VIP Gaming Panels</h2>
+            <div class="dl-item">
+                <div><p class="font-bold text-xs">Headshot Panel V2</p><p class="text-[9px] text-slate-400">Auto Aim & Sensitivity</p></div>
+                <button onclick="startDL('Headshot')" class="bg-blue-600 text-white text-[10px] px-3 py-1.5 rounded-lg font-bold">GET</button>
             </div>
-            <a href="#" id="nextBtn" class="block w-full bg-slate-200 text-slate-400 font-black py-4 rounded-2xl pointer-events-none uppercase shadow-lg">Read to Continue</a>
-            <div class="ad-space italic mt-4">ADVERTISEMENT #2</div>
+            <div class="dl-item">
+                <div><p class="font-bold text-xs">Fake Panel Pro</p><p class="text-[9px] text-slate-400">Anti-Ban Guest ID</p></div>
+                <button onclick="startDL('FakePanel')" class="bg-red-600 text-white text-[10px] px-3 py-1.5 rounded-lg font-bold">GET</button>
+            </div>
+        </div>
+        <div class="box-card shadow-xl text-center">
+            <h1 id="artTitle" class="text-lg font-black text-blue-700 mb-1 uppercase">Loading...</h1>
+            <p id="artBody" class="text-[11px] text-slate-500 mb-5 leading-tight">Please wait...</p>
+            <div class="bg-blue-50 p-5 rounded-[2rem] border-2 border-blue-100 mb-5">
+                <p class="text-[9px] font-black text-blue-400 uppercase">Step Ready In:</p>
+                <div id="countDown" class="text-4xl font-black text-blue-600">15</div>
+            </div>
+            <button id="nextBtn" class="w-full bg-slate-200 text-slate-400 font-black py-4 rounded-2xl uppercase text-sm shadow-md cursor-not-allowed">Wait...</button>
+        </div>
+        <div class="ad-space italic">ADVERTISEMENT #2</div>
+    </div>
+    <div id="dlOverlay" class="hidden fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-6 text-center">
+        <div class="bg-slate-900 border-2 border-blue-600 p-8 rounded-[35px] w-full">
+            <h2 id="dlStatus" class="text-lg font-black mb-2 uppercase text-blue-400">Verifying...</h2>
+            <div id="dlTimer" class="text-6xl font-black text-white mb-6">10</div>
+            <button id="dlFinal" class="hidden w-full bg-blue-600 py-4 rounded-xl font-black uppercase">Your Link Ready</button>
         </div>
     </div>
 <script>
-    const articles = [
-        { t: "1. Diamond Tips", b: "Free Fire diamonds lene ke liye hamesha official redeem codes use karein." },
-        { t: "2. Headshot Setting", b: "Sensitivity 100 rakhein aur custom HUD ko apne hisab se set karein." },
-        { t: "3. Best Pet Skills", b: "Waggor pet aapko gloo wall deta hai jo end zone mein bahut kaam aata hai." },
-        { t: "4. Rank Push", b: "Grandmaster ke liye hamesha squad ke saath khele aur survival par focus karein." },
-        { t: "5. Free Bundles", b: "Luck Royale vouchers save karein aur bade events par hi unka use karein." },
-        { t: "6. Character Combo", b: "Alok aur Kelly ka combination fast movement ke liye sabse best hai." },
-        { t: "7. Gun Skins", b: "Hamesha rate-of-fire wali skins use karein, isse damage zyada padta hai." },
-        { t: "8. Update News", b: "Naya OB update aane wala hai jisme naye map aur gun changes honge." },
-        { t: "9. Avoid Hack", b: "Kisi bhi hack ya script ka use na karein, account ban ho sakta hai." },
-        { t: "10. Final Step", b: "Mubarak ho! Aapne 10 steps pure kiye. Reward niche claim karein." }
+    const arts = [
+        { t: "1. Diamond Secret", b: "Redeem codes use karein safe diamonds ke liye." },
+        { t: "2. Headshot Pro", b: "Sensitivity 100 rakhein behtar game ke liye." },
+        { t: "3. Pet Skills", b: "Waggor pet hamesha sath rakhein wall ke liye." },
+        { t: "4. Rank Push", b: "Squad ke sath survive karke rank badhayein." },
+        { t: "5. Free Skins", b: "Official events se legendary skins claim karein." },
+        { t: "6. Speed Hack Tip", b: "Alok aur Kelly ka combo speed ke liye best hai." },
+        { t: "7. Gun Skins", b: "Rate-of-fire skins se damage zyada hota hai." },
+        { t: "8. OB Update", b: "Naye map changes agle update mein aayenge." },
+        { t: "9. Safety First", b: "Scripts use na karein account safe rakhne ke liye." },
+        { t: "10. Claim Now", b: "Saare steps pure hue! Reward niche claim karein." }
     ];
 </script>
 <script>
     const params = new URLSearchParams(window.location.search);
     let p = parseInt(params.get('p')) || 1;
-    document.getElementById('artTitle').innerText = articles[p-1].t;
-    document.getElementById('artBody').innerText = articles[p-1].b;
+    document.getElementById('artTitle').innerText = arts[p-1].t;
+    document.getElementById('artBody').innerText = arts[p-1].b;
+
     let time = 15;
     const btn = document.getElementById('nextBtn');
-    const timer = setInterval(() => {
-        time--;
-        document.getElementById('countDown').innerText = "00:" + (time < 10 ? "0" + time : time);
-        if (time <= 0) {
-            clearInterval(timer);
-            document.getElementById('countDown').innerText = "READY!";
-            btn.innerText = (p < 10) ? "GO TO STEP " + (p + 1) : "GET YOUR CODE";
-            btn.classList.remove('bg-slate-200', 'text-slate-400', 'pointer-events-none');
-            btn.classList.add('bg-blue-600', 'text-white');
-            btn.href = (p < 10) ? "page2.html?p=" + (p + 1) : "page2.html?p=1";
+    setInterval(() => {
+        if(time > 0) {
+            time--;
+            document.getElementById('countDown').innerText = time;
+            if(time == 0) {
+                document.getElementById('countDown').innerText = "READY";
+                btn.innerText = (p < 10) ? "Step " + (p+1) + " Ready" : "Get Final Code";
+                btn.className = "w-full bg-blue-600 text-white font-black py-4 rounded-2xl uppercase shadow-lg";
+                btn.onclick = () => { window.location.href = "page2.html?p=" + (p < 10 ? p+1 : 1); };
+            }
         }
     }, 1000);
+</script>
+<script>
+    function startDL(n) {
+        document.getElementById('dlOverlay').classList.remove('hidden');
+        let c = 10;
+        const iv = setInterval(() => {
+            c--;
+            document.getElementById('dlTimer').innerText = c;
+            if(c<=0) {
+                clearInterval(iv);
+                document.getElementById('dlTimer').classList.add('hidden');
+                document.getElementById('dlStatus').innerText = "Link Almost Ready!";
+                document.getElementById('dlFinal').classList.remove('hidden');
+                document.getElementById('dlFinal').onclick = () => { location.reload(); };
+            }
+        }, 1000);
+    }
 </script>
 </body>
 </html>
