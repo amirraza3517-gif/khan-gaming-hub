@@ -3,34 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step 2: Verify Your ID</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
+    <title>Free Fire Diamonds Guide - Khan Gaming</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .content-section { background: white; color: #334155; padding: 20px; border-radius: 20px; text-align: left; line-height: 1.6; }
+        .ad-placeholder { background: #f8fafc; border: 1px dashed #cbd5e1; padding: 15px; margin: 15px 0; text-align: center; font-size: 10px; color: #94a3b8; }
+        h2 { font-weight: bold; font-size: 18px; color: #1e40af; margin-top: 15px; }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-    <div class="bg-yellow-400 p-2 text-center text-[10px] font-bold uppercase sticky top-0">
-        🔒 Step 2/3: Generating Your Reward Code...
-    </div>
-    <main class="max-w-2xl mx-auto bg-white shadow-lg min-h-screen p-6">
-        <h2 class="text-2xl font-bold text-center mb-6 text-blue-900 underline">Free Fire Reward: Verify Your ID</h2>
-        <div class="bg-red-50 p-4 rounded-lg border border-red-200 mb-6 text-center">
-            <p class="text-sm font-bold text-red-600">IMPORTANT: Do not close this page or the timer will reset!</p>
-        </div>
-        <div class="my-8 border-2 border-dashed border-gray-300 p-2 text-center bg-gray-50">
-            <p class="text-[10px] text-gray-400 mb-2 italic underline">Verify by clicking on the ad below</p>
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579809279" data-ad-format="rectangle"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-        <div class="space-y-4 text-sm leading-relaxed text-gray-700">
-            <p>1. अपना Free Fire ID तैयार रखें।</p>
-            <p>2. नीचे दिए गए विज्ञापन (Ad) पर क्लिक करके 10 सेकंड तक रुकें।</p>
-            <p>3. उसके बाद वापस आकर "GET REWARD" बटन दबाएं।</p>
-        </div>
-        <div class="mt-10 text-center">
-            <button onclick="window.location.href='verify.html'" class="w-full bg-green-600 text-white font-black py-5 rounded-lg shadow-2xl uppercase hover:bg-green-700">
-                GET YOUR REDEEM CODE NOW →
+<body class="bg-[#0b1120] p-4 font-sans text-slate-100">
+    <div class="max-w-md mx-auto">
+        <div class="ad-placeholder italic">ADVERTISEMENT</div>
+
+        <div class="content-section shadow-2xl">
+            <h1 class="text-2xl font-black text-slate-900 mb-4">Free Fire Max Diamonds Kaise Le?</h1>
+            <p class="text-sm italic mb-4">Doston, aaj kal har koi Free Fire mein free diamonds lena chahta hai taaki wo naye emotes aur skins nikal sake...</p>
+            
+            <div class="ad-placeholder italic">SPONSORED LINK</div>
+
+            <h2>1. Redeem Codes ka Istemal</h2>
+            <p class="text-[13px]">Garena har mahine naye redeem codes nikaalta hai. In codes ko FF Reward site par ja kar claim karna hota hai. Hamari site aapko wahi secret codes deti hai.</p>
+            <h2>2. In-Game Events aur Missions</h2>
+            <p class="text-[13px]">Agar aap rozana game khelte hain, toh aapko pata hoga ki bahut saare events aate hain jisme thode diamonds kharch karke ya free mein missions poore karke rewards milte hain.</p>
+
+            <div class="ad-placeholder italic">ADVERTISEMENT</div>
+
+            <h2>3. Third Party Apps se Bachkar Rahein</h2>
+            <p class="text-[13px]">Kayi saari sites aapka account hack kar sakti hain. Isliye hamesha trusted platforms ka hi istemal karein. Khan Gaming Hub aapko safe aur secure tarika batata hai.</p>
+            <div class="my-6 p-5 bg-blue-50 border-2 border-blue-200 rounded-2xl text-center">
+                <p class="text-[11px] font-bold text-blue-800 uppercase mb-2">💎 Your Diamond Code is Unlocking:</p>
+                <div id="count" class="text-4xl font-black text-blue-600">00:30</div>
+            </div>
+            <button id="getBtn" disabled class="w-full bg-slate-300 text-white font-black py-4 rounded-xl shadow-lg cursor-not-allowed pointer-events-none uppercase text-lg">
+                Please Read Article First...
             </button>
+
+            <div class="ad-placeholder italic">ADVERTISEMENT</div>
+
+            <p class="text-[12px] mt-4 text-slate-400">Disclaimer: Ye site sirf jankari ke liye hai. Hum kisi bhi tarah ke hacking ko promote nahi karte hain.</p>
         </div>
-    </main>
+    </div>
+    <script>
+        let seconds = 30; // 30 second ka timer rakha hai taki log content padhen
+        const timerDiv = document.getElementById('count');
+        const btn = document.getElementById('getBtn');
+
+        const timer = setInterval(() => {
+            seconds--;
+            timerDiv.innerText = "00:" + (seconds < 10 ? "0" + seconds : seconds);
+            if (seconds <= 0) {
+                clearInterval(timer);
+                timerDiv.innerText = "READY!";
+                btn.innerText = "GET REDEEM CODE";
+                btn.classList.remove('bg-slate-300', 'pointer-events-none');
+                btn.classList.add('bg-blue-600', 'hover:bg-blue-700', 'animate-bounce');
+                btn.onclick = () => { alert('Aapka Code: KHAN-FF-88-MAX'); };
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
