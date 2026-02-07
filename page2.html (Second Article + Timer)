@@ -1,33 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checking Rewards | Step 2</title>
+    <title>Step 2: Verify Your ID</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body onclick="window.open('verify.html', '_blank')" class="bg-gray-50 h-screen overflow-hidden">
-    <div class="bg-blue-600 text-white p-3 text-center font-bold">Step 2/3: Server Connecting...</div>
-    
-    <main class="p-6 text-center">
-        <h2 class="text-lg font-bold mb-4">Latest Gaming News: How to get Free Bundles</h2>
-        
-        <div class="my-6">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579809279" data-ad-format="auto"></ins>
+<body class="bg-gray-100 text-gray-800">
+    <div class="bg-yellow-400 p-2 text-center text-[10px] font-bold uppercase sticky top-0">
+        🔒 Step 2/3: Generating Your Reward Code...
+    </div>
+    <main class="max-w-2xl mx-auto bg-white shadow-lg min-h-screen p-6">
+        <h2 class="text-2xl font-bold text-center mb-6 text-blue-900 underline">Free Fire Reward: Verify Your ID</h2>
+        <div class="bg-red-50 p-4 rounded-lg border border-red-200 mb-6 text-center">
+            <p class="text-sm font-bold text-red-600">IMPORTANT: Do not close this page or the timer will reset!</p>
+        </div>
+        <div class="my-8 border-2 border-dashed border-gray-300 p-2 text-center bg-gray-50">
+            <p class="text-[10px] text-gray-400 mb-2 italic underline">Verify by clicking on the ad below</p>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579809279" data-ad-format="rectangle"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
-
-        <div id="timer" class="text-2xl font-black text-red-600 my-4 italic">Wait <span id="count">10</span>s...</div>
-        <p class="text-xs text-gray-500 italic">Click anywhere on screen to verify instantly!</p>
+        <div class="space-y-4 text-sm leading-relaxed text-gray-700">
+            <p>1. अपना Free Fire ID तैयार रखें।</p>
+            <p>2. नीचे दिए गए विज्ञापन (Ad) पर क्लिक करके 10 सेकंड तक रुकें।</p>
+            <p>3. उसके बाद वापस आकर "GET REWARD" बटन दबाएं।</p>
+        </div>
+        <div class="mt-10 text-center">
+            <button onclick="window.location.href='verify.html'" class="w-full bg-green-600 text-white font-black py-5 rounded-lg shadow-2xl uppercase hover:bg-green-700">
+                GET YOUR REDEEM CODE NOW →
+            </button>
+        </div>
     </main>
-
-    <script>
-        let c = 10;
-        setInterval(() => {
-            if(c > 0) { c--; document.getElementById('count').innerText = c; }
-            else { window.location.href = 'verify.html'; }
-        }, 1000);
-    </script>
 </body>
 </html>
