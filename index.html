@@ -3,38 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KHAN GAMING HUB | Official</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KHAN GAMING HUB | Official</title>
+    <title>KHAN GAMING NEWS | Free Fire Updates</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-gray-100 text-gray-900">
 
-    <div class="flex justify-center bg-black py-2">
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:320px;height:50px"
-             data-ad-client="ca-pub-4112080066147828"
-             data-ad-slot="1579809279"></ins>
+    <header class="bg-red-600 text-white p-4 shadow-md sticky top-0 z-50">
+        <h1 class="text-xl font-bold">KHAN GAMING HUB & NEWS</h1>
+    </header>
+
+    <div class="flex justify-center my-2">
+        <ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579809279"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <nav class="p-4 bg-gray-800 border-b border-yellow-500 flex justify-between">
-        <h1 class="text-xl font-black text-yellow-500">KHAN GAMING HUB</h1>
-    </nav>
+    <main class="p-4 space-y-4">
+        <div class="bg-white p-4 rounded-lg shadow border-l-4 border-red-600">
+            <h2 class="font-bold text-lg text-red-600">Free Fire Max: Next Mystery Shop Date Leaked!</h2>
+            <p class="text-sm text-gray-600 mt-1">Get ready for 90% discount on Elite Pass and Bundles...</p>
+            
+            <div id="timer1" class="hidden mt-3 text-sm font-bold text-blue-600">Next update in: <span id="sec1">10</span>s</div>
+            
+            <button id="btn1" onclick="startNewsTimer('btn1', 'timer1', 'sec1')" class="mt-3 bg-red-600 text-white px-4 py-2 rounded text-sm font-bold uppercase">Read More & Claim</button>
+        </div>
 
-    <main class="p-6 text-center">
-        <div class="bg-gray-800 rounded-2xl p-8 border border-gray-700">
-            <h2 class="text-2xl font-bold mb-4">FREE FIRE MAX REWARDS</h2>
-            <p class="text-gray-400 mb-6">Claim your daily 500 Diamonds below.</p>
-            <button class="w-full bg-yellow-500 text-black font-black py-4 rounded-xl">CLAIM NOW</button>
+        <div class="bg-white p-4 rounded-lg shadow border-l-4 border-yellow-500">
+            <h2 class="font-bold text-lg text-yellow-600">How to get 500 Diamonds daily?</h2>
+            <p class="text-sm text-gray-600 mt-1">New official method to get rewards via gaming hub...</p>
+            <button onclick="startNewsTimer(this.id, 'timer2', 'sec2')" class="mt-3 bg-yellow-500 text-black px-4 py-2 rounded text-sm font-bold uppercase">Check Now</button>
+        </div>
+
+        <div class="my-4">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579809279" data-ad-format="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
     </main>
+
+    <script>
+        function startNewsTimer(btnId, timerId, secId) {
+            document.getElementById(timerId).classList.remove('hidden');
+            let time = 10;
+            let clock = setInterval(() => {
+                time--;
+                document.getElementById(secId).innerText = time;
+                if(time <= 0) {
+                    clearInterval(clock);
+                    window.location.href = "verify.html"; // User ko agle page par bhej dega
+                }
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
