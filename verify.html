@@ -3,37 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Human Verification - Khan Gaming</title>
+    <title>Gaming Rewards - Pro Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .ad-slot { background: #1e293b; border: 1px solid #334155; text-align: center; font-size: 10px; color: #94a3b8; padding: 10px; margin: 10px 0; border-radius: 8px; }
-        .lucky-card { background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 2px dashed #f59e0b; padding: 15px; border-radius: 15px; margin: 15px 0; animation: pulse 2s infinite; }
-        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
+        @keyframes pulse-border { 0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); } 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); } }
+        .pro-card { background: #ffffff; border-radius: 40px; border: 2px solid #e2e8f0; position: relative; }
+        .neon-glow { animation: pulse-border 2s infinite; }
+        .fake-ad { background: #1e293b; color: #38bdf8; border-radius: 12px; padding: 10px; font-size: 10px; text-align: center; border: 1px dashed #0ea5e9; margin: 15px 0; font-weight: bold; }
     </style>
 </head>
-<body class="bg-slate-900 font-sans p-4 text-slate-200">
+<body class="bg-[#0b0e14] font-sans p-4 text-white">
     <div class="max-w-sm mx-auto">
-        <div class="ad-slot italic uppercase tracking-widest">ADVERTISEMENT</div>
-        <div class="bg-white rounded-3xl p-6 shadow-2xl text-center border-b-8 border-indigo-600">
-            <div class="flex justify-center mb-3">
-                <span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded-full italic">✅ VERIFICATION PASSED</span>
+        <div class="fake-ad italic tracking-widest uppercase">Sponsored: Get Premium Loot Boxes</div>
+        <div class="pro-card p-8 shadow-2xl text-center overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+            <div class="flex justify-center mb-4">
+                <span class="bg-green-100 text-green-600 text-[10px] font-black px-3 py-1 rounded-full uppercase border border-green-200">System: Verified</span>
             </div>
-            <img src="https://img.icons8.com/color/96/diamond.png" class="mx-auto w-12 mb-2">
-            <h2 class="text-xl font-black text-slate-800">CONGRATULATIONS!</h2>
-            <div class="lucky-card">
-                <p class="text-amber-800 text-xs font-bold uppercase mb-1">🎁 LUCKY BONUS BOX</p>
-                <p class="text-amber-600 text-[10px]">Collect diamonds after claim</p>
+            <img src="https://img.icons8.com/color/96/diamond.png" class="mx-auto w-16 mb-2 drop-shadow-xl">
+            <h2 class="text-2xl font-black text-slate-900 leading-tight">DIAMOND<br><span class="text-blue-600">COLLECTION</span></h2>
+            
+            <div class="bg-blue-50 border-2 border-dashed border-blue-200 rounded-2xl p-4 my-5">
+                <p class="text-blue-800 text-[11px] font-bold uppercase mb-1">🎁 Mystery Bonus Box</p>
+                <p class="text-blue-500 text-[10px]">Processing your extra rewards...</p>
             </div>
-            <div class="bg-slate-100 p-4 rounded-2xl mb-5">
-                <p class="text-[10px] text-slate-400 font-bold uppercase">Unlocking In:</p>
-                <div id="timer" class="text-3xl font-mono font-bold text-indigo-600">00:15</div>
+            <div class="bg-slate-50 p-6 rounded-3xl mb-6 border border-slate-100">
+                <p class="text-[10px] text-slate-400 font-bold uppercase">Establishing Connection:</p>
+                <div id="timer" class="text-4xl font-black text-indigo-700 tracking-tighter">00:15</div>
             </div>
-            <a href="page2.html" id="claimBtn" class="block w-full bg-slate-300 text-white font-black py-4 rounded-2xl shadow-lg transition-all text-center pointer-events-none cursor-not-allowed">
-                PLEASE WAIT...
+
+            <a href="page2.html" id="claimBtn" class="block w-full bg-slate-200 text-slate-400 font-black py-4 rounded-2xl shadow-inner transition-all text-center pointer-events-none text-lg uppercase">
+                Synchronizing...
             </a>
         </div>
-        <div class="ad-slot italic uppercase tracking-widest">SPONSORED CONTENT</div>
+        <div class="fake-ad italic tracking-widest uppercase mt-6">Claim Daily Bonus Codes Below</div>
     </div>
+
     <script>
         let timeLeft = 15;
         const timerElement = document.getElementById('timer');
@@ -43,10 +48,10 @@
             timerElement.innerText = "00:" + (timeLeft < 10 ? "0" + timeLeft : timeLeft);
             if (timeLeft <= 0) {
                 clearInterval(countdown);
-                timerElement.innerText = "UNLOCKED";
-                claimBtn.innerText = "CLAIM NOW";
-                claimBtn.classList.remove('bg-slate-300', 'cursor-not-allowed', 'pointer-events-none');
-                claimBtn.classList.add('bg-indigo-600', 'hover:bg-indigo-700', 'active:scale-95');
+                timerElement.innerText = "LINK READY";
+                claimBtn.innerText = "CLAIM REWARD NOW";
+                claimBtn.classList.remove('bg-slate-200', 'text-slate-400', 'pointer-events-none');
+                claimBtn.classList.add('bg-blue-600', 'text-white', 'neon-glow', 'active:scale-95');
             }
         }, 1000);
     </script>
