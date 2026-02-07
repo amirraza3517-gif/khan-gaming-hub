@@ -3,36 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verification - Khan Gaming</title>
+    <title>Gaming Downloads - Khan Gaming</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
+    <style>
+        .dl-card { background: #1e293b; border: 1px solid #334155; border-radius: 20px; padding: 15px; margin-bottom: 15px; }
+        .timer-box { background: #2563eb; color: white; padding: 10px; border-radius: 12px; font-weight: 900; }
+        .ad-mini { background: #0f172a; color: #475569; font-size: 10px; padding: 5px; text-align: center; border-radius: 8px; margin: 10px 0; border: 1px dashed #1e293b; }
+    </style>
 </head>
-<body class="bg-[#0b0e14] flex items-center justify-center min-h-screen p-4 font-sans">
-    <div class="max-w-sm w-full bg-white rounded-[40px] p-8 text-center shadow-2xl border-b-8 border-blue-600">
-        <img src="https://img.icons8.com/color/96/diamond.png" class="mx-auto w-16 mb-4">
-        <h2 class="text-2xl font-black text-slate-800 uppercase italic">Verification</h2>
-        <div class="bg-slate-50 p-6 rounded-3xl mb-6 border border-slate-100 mt-4">
-            <p class="text-[10px] text-slate-400 font-black uppercase mb-1">Unlocking Link In:</p>
-            <div id="timer" class="text-4xl font-black text-blue-600">00:15</div>
+<body class="bg-[#0b0e14] text-slate-100 p-4 font-sans">
+    <div class="max-w-md mx-auto">
+        <h1 class="text-2xl font-black text-center mb-6 text-blue-500 italic uppercase">VIP Gaming Panel</h1>
+        
+        <div class="ad-mini italic font-bold">SPONSORED ADVERTISEMENT</div>
+
+        <div id="mainContent">
+            <div class="dl-card shadow-lg">
+                <h3 class="font-bold text-blue-400">🔥 Headshot Panel V2</h3>
+                <p class="text-[10px] text-slate-400 mb-3">Auto Headshot & High Sensitivity</p>
+                <button onclick="startDownload('Headshot Panel')" class="w-full bg-blue-600 py-3 rounded-xl font-black uppercase text-sm">Download Now</button>
+            </div>
+
+            <div class="dl-card shadow-lg">
+                <h3 class="font-bold text-red-400">🎯 Fake Panel Headshot</h3>
+                <p class="text-[10px] text-slate-400 mb-3">Safe to use on Guest IDs</p>
+                <button onclick="startDownload('Fake Panel')" class="w-full bg-red-600 py-3 rounded-xl font-black uppercase text-sm">Download Now</button>
+            </div>
+            <div class="ad-mini italic font-bold">ADS BY GOOGLE</div>
+
+            <div class="dl-card shadow-lg">
+                <h3 class="font-bold text-yellow-400">✨ Golden Gun Skins</h3>
+                <p class="text-[10px] text-slate-400 mb-3">Unlock all legendary skins</p>
+                <button onclick="startDownload('Gun Skins')" class="w-full bg-yellow-600 py-3 rounded-xl font-black uppercase text-sm">Download Now</button>
+            </div>
+
+            <div class="dl-card shadow-lg">
+                <h3 class="font-bold text-green-400">🎁 Lucky Box (Diamonds)</h3>
+                <p class="text-[10px] text-slate-400 mb-3">Daily 500 Diamonds script</p>
+                <button onclick="startDownload('Lucky Box')" class="w-full bg-green-600 py-3 rounded-xl font-black uppercase text-sm">Download Now</button>
+            </div>
         </div>
-        <a href="#" id="claimBtn" class="block w-full bg-slate-200 text-slate-400 font-black py-4 rounded-2xl text-center pointer-events-none cursor-not-allowed uppercase transition-all shadow-md">Please Wait...</a>
+        <div id="timerOverlay" class="hidden fixed inset-0 bg-black/90 flex items-center justify-center p-6 text-center z-50">
+            <div class="bg-slate-900 border-2 border-blue-600 p-10 rounded-[40px] w-full">
+                <h2 id="statusText" class="text-xl font-black mb-4 uppercase">Preparing Link...</h2>
+                <div id="bigTimer" class="text-7xl font-black text-blue-500 mb-6">10</div>
+                <div class="ad-mini italic mb-4">ADVERTISEMENT - PLEASE WAIT</div>
+                <button id="finalBtn" class="hidden w-full bg-blue-600 py-5 rounded-2xl font-black uppercase text-lg">Your Link Ready</button>
+            </div>
+        </div>
     </div>
-    <script>
-        let timeLeft = 15;
-        const timerElement = document.getElementById('timer');
-        const claimBtn = document.getElementById('claimBtn');
-        const countdown = setInterval(() => {
-            timeLeft--;
-            timerElement.innerText = "00:" + (timeLeft < 10 ? "0" + timeLeft : timeLeft);
-            if (timeLeft <= 0) {
-                clearInterval(countdown);
-                timerElement.innerText = "READY";
-                claimBtn.innerText = "CONTINUE TO STEP 1";
-                claimBtn.href = "page2.html?p=1";
-                claimBtn.classList.remove('bg-slate-200', 'text-slate-400', 'pointer-events-none');
-                claimBtn.classList.add('bg-blue-600', 'text-white');
+<script>
+    function startDownload(name) {
+        document.getElementById('timerOverlay').classList.remove('hidden');
+        let count = 10;
+        let status = document.getElementById('statusText');
+        const timerText = document.getElementById('bigTimer');
+        const finalBtn = document.getElementById('finalBtn');
+
+        const cd = setInterval(() => {
+            count--;
+            timerText.innerText = count;
+            if(count == 5) status.innerText = "Almost Ready...";
+            
+            if(count <= 0) {
+                clearInterval(cd);
+                timerText.classList.add('hidden');
+                status.innerText = "Verification Complete!";
+                finalBtn.classList.remove('hidden');
+                
+                // Click karne par page2.html par loop shuru
+                finalBtn.onclick = () => {
+                    window.location.href = "page2.html?p=1&item=" + name;
+                };
             }
         }, 1000);
-    </script>
+    }
+</script>
 </body>
 </html>
