@@ -3,53 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Step: Claim Diamonds</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
+    <title>Human Verification - Khan Gaming</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-        .animate-pulse-slow { animation: pulse 2s infinite; }
+        .ad-slot { background: #1e293b; border: 1px solid #334155; text-align: center; font-size: 10px; color: #94a3b8; padding: 10px; margin: 10px 0; border-radius: 8px; }
+        .lucky-card { background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 2px dashed #f59e0b; padding: 15px; border-radius: 15px; margin: 15px 0; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.02); } }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-    <div class="bg-green-500 p-2 text-center text-[10px] font-bold uppercase">
-        ✅ Human Verification Passed - Generating Code
-    </div>
-    <main class="max-w-md mx-auto p-6 mt-10">
-        <div class="bg-white text-gray-900 rounded-2xl p-8 shadow-2xl border-4 border-yellow-400 text-center relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-2 bg-yellow-400"></div>
-            <img src="https://www.freeiconspng.com/uploads/blue-diamond-png-25.png" class="w-20 mx-auto mb-4 animate-bounce" alt="Diamond">
-            <h2 class="text-2xl font-black text-blue-600 mb-2">Congratulations!</h2>
-            <p class="text-gray-600 text-sm mb-4 font-bold">Your 5000 Diamonds are ready to claim.</p>
-            <div class="bg-yellow-100 border-2 border-yellow-400 rounded-lg p-4 mb-6">
-                <p class="text-[12px] font-bold text-yellow-700 uppercase mb-1">Redeem Code Unlock In:</p>
-                <div id="timer" class="text-4xl font-black text-red-600">00:30</div>
+<body class="bg-slate-900 font-sans p-4 text-slate-200">
+    <div class="max-w-sm mx-auto">
+        <div class="ad-slot italic uppercase tracking-widest">ADVERTISEMENT</div>
+        <div class="bg-white rounded-3xl p-6 shadow-2xl text-center border-b-8 border-indigo-600">
+            <div class="flex justify-center mb-3">
+                <span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded-full italic">✅ VERIFICATION PASSED</span>
             </div>
-            <div class="my-4 min-h-[100px] border border-dashed border-gray-300 flex items-center justify-center">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579809279" data-ad-format="rectangle"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <img src="https://img.icons8.com/color/96/diamond.png" class="mx-auto w-12 mb-2">
+            <h2 class="text-xl font-black text-slate-800">CONGRATULATIONS!</h2>
+            <div class="lucky-card">
+                <p class="text-amber-800 text-xs font-bold uppercase mb-1">🎁 LUCKY BONUS BOX</p>
+                <p class="text-amber-600 text-[10px]">Collect diamonds after claim</p>
             </div>
-            <button id="claimBtn" disabled class="w-full bg-gray-400 text-white font-black py-4 rounded-xl shadow-lg cursor-not-allowed transition duration-500 uppercase">
-                Claim Your Bonus!
-            </button>
+            <div class="bg-slate-100 p-4 rounded-2xl mb-5">
+                <p class="text-[10px] text-slate-400 font-bold uppercase">Unlocking In:</p>
+                <div id="timer" class="text-3xl font-mono font-bold text-indigo-600">00:15</div>
+            </div>
+            <a href="page2.html" id="claimBtn" class="block w-full bg-slate-300 text-white font-black py-4 rounded-2xl shadow-lg transition-all text-center pointer-events-none cursor-not-allowed">
+                PLEASE WAIT...
+            </a>
         </div>
-    </main>
-
+        <div class="ad-slot italic uppercase tracking-widest">SPONSORED CONTENT</div>
+    </div>
     <script>
-        let timeLeft = 30;
+        let timeLeft = 15;
         const timerElement = document.getElementById('timer');
         const claimBtn = document.getElementById('claimBtn');
-
         const countdown = setInterval(() => {
             timeLeft--;
             timerElement.innerText = "00:" + (timeLeft < 10 ? "0" + timeLeft : timeLeft);
             if (timeLeft <= 0) {
                 clearInterval(countdown);
                 timerElement.innerText = "UNLOCKED";
-                claimBtn.disabled = false;
-                claimBtn.classList.remove('bg-gray-400', 'cursor-not-allowed');
-                claimBtn.classList.add('bg-gradient-to-r', 'from-yellow-400', 'to-orange-500', 'animate-pulse-slow');
-                claimBtn.innerText = "CLAIM NOW (CODE: FFMAX786)";
+                claimBtn.innerText = "CLAIM NOW";
+                claimBtn.classList.remove('bg-slate-300', 'cursor-not-allowed', 'pointer-events-none');
+                claimBtn.classList.add('bg-indigo-600', 'hover:bg-indigo-700', 'active:scale-95');
             }
         }, 1000);
     </script>
