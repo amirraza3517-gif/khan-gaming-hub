@@ -3,42 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming Rewards - Pro Hub</title>
+    <title>Verification - Khan Gaming</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @keyframes pulse-border { 0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); } 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); } }
-        .pro-card { background: #ffffff; border-radius: 40px; border: 2px solid #e2e8f0; position: relative; }
-        .neon-glow { animation: pulse-border 2s infinite; }
-        .fake-ad { background: #1e293b; color: #38bdf8; border-radius: 12px; padding: 10px; font-size: 10px; text-align: center; border: 1px dashed #0ea5e9; margin: 15px 0; font-weight: bold; }
+        .neon-glow { animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); } 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); } }
     </style>
 </head>
-<body class="bg-[#0b0e14] font-sans p-4 text-white">
-    <div class="max-w-sm mx-auto">
-        <div class="fake-ad italic tracking-widest uppercase">Sponsored: Get Premium Loot Boxes</div>
-        <div class="pro-card p-8 shadow-2xl text-center overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
-            <div class="flex justify-center mb-4">
-                <span class="bg-green-100 text-green-600 text-[10px] font-black px-3 py-1 rounded-full uppercase border border-green-200">System: Verified</span>
-            </div>
-            <img src="https://img.icons8.com/color/96/diamond.png" class="mx-auto w-16 mb-2 drop-shadow-xl">
-            <h2 class="text-2xl font-black text-slate-900 leading-tight">DIAMOND<br><span class="text-blue-600">COLLECTION</span></h2>
-            
-            <div class="bg-blue-50 border-2 border-dashed border-blue-200 rounded-2xl p-4 my-5">
-                <p class="text-blue-800 text-[11px] font-bold uppercase mb-1">🎁 Mystery Bonus Box</p>
-                <p class="text-blue-500 text-[10px]">Processing your extra rewards...</p>
-            </div>
-            <div class="bg-slate-50 p-6 rounded-3xl mb-6 border border-slate-100">
-                <p class="text-[10px] text-slate-400 font-bold uppercase">Establishing Connection:</p>
-                <div id="timer" class="text-4xl font-black text-indigo-700 tracking-tighter">00:15</div>
-            </div>
-
-            <a href="page2.html" id="claimBtn" class="block w-full bg-slate-200 text-slate-400 font-black py-4 rounded-2xl shadow-inner transition-all text-center pointer-events-none text-lg uppercase">
-                Synchronizing...
-            </a>
+<body class="bg-[#0b0e14] flex items-center justify-center min-h-screen p-4">
+    <div class="max-w-sm w-full bg-white rounded-[40px] p-8 text-center shadow-2xl border-b-8 border-blue-600">
+        <img src="https://img.icons8.com/color/96/diamond.png" class="mx-auto w-16 mb-4">
+        <h2 class="text-2xl font-black text-slate-800 uppercase">Congratulations!</h2>
+        <p class="text-slate-500 text-xs mb-6 font-medium">Your 5000 Diamonds are Ready</p>
+        <div class="bg-slate-50 p-6 rounded-3xl mb-6 border border-slate-100">
+            <p class="text-[10px] text-slate-400 font-bold uppercase">Unlocking In:</p>
+            <div id="timer" class="text-4xl font-black text-blue-600">00:15</div>
         </div>
-        <div class="fake-ad italic tracking-widest uppercase mt-6">Claim Daily Bonus Codes Below</div>
-    </div>
 
+        <a href="#" id="claimBtn" class="block w-full bg-slate-200 text-slate-400 font-black py-4 rounded-2xl text-center pointer-events-none cursor-not-allowed uppercase transition-all">
+            Please Wait...
+        </a>
+    </div>
     <script>
         let timeLeft = 15;
         const timerElement = document.getElementById('timer');
@@ -48,12 +33,80 @@
             timerElement.innerText = "00:" + (timeLeft < 10 ? "0" + timeLeft : timeLeft);
             if (timeLeft <= 0) {
                 clearInterval(countdown);
-                timerElement.innerText = "LINK READY";
-                claimBtn.innerText = "CLAIM REWARD NOW";
+                timerElement.innerText = "READY";
+                claimBtn.innerText = "CLAIM NOW";
+                claimBtn.href = "page2.html?p=1";
                 claimBtn.classList.remove('bg-slate-200', 'text-slate-400', 'pointer-events-none');
-                claimBtn.classList.add('bg-blue-600', 'text-white', 'neon-glow', 'active:scale-95');
+                claimBtn.classList.add('bg-blue-600', 'text-white', 'neon-glow');
             }
         }, 1000);
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step <span id="stNum">1</span> - Khan Gaming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0b1120] p-4 font-sans text-slate-100">
+    <script>
+        const articles = [
+            { t: "Diamond Trick 2026", b: "Free Fire mein diamonds lene ke liye official redeem codes ka use karein. Rozana naye events aate hain jahan aapko free bundles mil sakte hain." },
+            { t: "Headshot Settings", b: "Sensitivity settings ko 100 par rakhein aur custom HUD ko apne hisab se set karein taaki aapka gameplay fast ho sake." },
+            { t: "Free Skins Guide", b: "Skins lene ke liye Gold Royale aur weapon royale par dhyan dein. Diamonds bachayein aur sirf legendary events mein hi kharch karein." },
+            { t: "Rank Push Tips", b: "Grandmaster pahunchne ke liye survival points zaroori hain. Hamesha zone ke saath chalein aur end tak survive karein." },
+            { t: "New Character Skills", b: "Hamesha active skills jaise Alok ya Tatsuya ka use karein jo aapko fight ke beech mein speed aur HP dete hain." },
+            { t: "Pet Combinations", b: "Gloo wall ke liye Mr. Waggor sabse best pet hai. Ise hamesha apne saath rakhein taaki aapke pas hamesha cover rahe." },
+            { t: "Update News OB50", b: "Agle update mein naya map aur thode gun changes aane wale hain. Taiyar rahein naye challenges ke liye." },
+            { t: "Daily Login Rewards", b: "Game ko rozana login karein kyunki 7 din login karne par Garena special crates aur vouchers free deta hai." },
+            { t: "Avoid Hack Tools", b: "Kisi bhi hack tool ka use na karein, isse aapka account ban ho sakta hai. Sirf trusted sources par hi bharosa karein." },
+            { t: "Final Step Verification", b: "Aapne saare steps poore kar liye hain! Ab aap apna final reward claim karne ke liye niche click kar sakte hain." }
+        ];
+    </script>
+    <div class="max-w-md mx-auto bg-white rounded-[30px] p-6 text-slate-800 shadow-2xl mt-10">
+        <h1 id="artTitle" class="text-2xl font-black text-blue-600 mb-4">Loading...</h1>
+        <p id="artBody" class="text-[14px] leading-relaxed mb-6 text-slate-500">Please wait while we load the article...</p>
+        
+        <div class="bg-blue-50 p-5 rounded-2xl text-center mb-6">
+            <p class="text-[10px] font-bold text-blue-400 uppercase">Next Step Unlocks In:</p>
+            <div id="countDown" class="text-4xl font-black text-blue-600">00:15</div>
+        </div>
+        <a href="#" id="nextBtn" class="block w-full bg-slate-200 text-slate-400 font-black py-4 rounded-xl text-center pointer-events-none cursor-not-allowed uppercase text-lg">
+            Read to Continue
+        </a>
+    </div>    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        let currentPage = parseInt(urlParams.get('p')) || 1;
+        
+        document.getElementById('artTitle').innerText = articles[currentPage-1].t;
+        document.getElementById('artBody').innerText = articles[currentPage-1].b;
+        document.getElementById('stNum').innerText = currentPage;
+
+        let timeLeft = 15;
+        const timerDiv = document.getElementById('countDown');
+        const btn = document.getElementById('nextBtn');
+
+        const interval = setInterval(() => {
+            timeLeft--;
+            timerDiv.innerText = "00:" + (timeLeft < 10 ? "0" + timeLeft : timeLeft);
+            if (timeLeft <= 0) {
+                clearInterval(interval);
+                timerDiv.innerText = "READY!";
+                btn.innerText = (currentPage < 10) ? "GO TO STEP " + (currentPage + 1) : "GET FINAL CODE";
+                btn.classList.remove('bg-slate-200', 'text-slate-400', 'pointer-events-none');
+                btn.classList.add('bg-blue-600', 'text-white');
+                
+                if (currentPage < 10) {
+                    btn.href = "page2.html?p=" + (currentPage + 1);
+                } else {
+                    btn.href = "page2.html?p=1"; // Loop back to 1
+                }
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+
