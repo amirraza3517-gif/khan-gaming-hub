@@ -1,3 +1,4 @@
+
 User-agent: *
 Allow: /
-Sitemap: https://amirraza3511-git.github.io/khan-gaming-hub/sitemap.xml
+Sitemap: https://khan-gaming-hub.vercel.app/sitemap.xml
