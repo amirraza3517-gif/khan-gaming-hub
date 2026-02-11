@@ -3,47 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khan Gaming - File Download</title>
+    <title>Khan Gaming - File Unlocker</title>
     <style>
-        body { background-color: #000; color: #fff; font-family: sans-serif; text-align: center; padding-top: 50px; }
-        .container { border: 2px solid #00ff00; padding: 30px; display: inline-block; border-radius: 15px; background: #111; box-shadow: 0 0 20px #00ff00; }
-        .status { font-size: 20px; color: #ff3333; margin-bottom: 20px; font-weight: bold; }
-        .btn { background: #00ff00; color: #000; padding: 15px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; display: none; font-size: 18px; }
-        .file-info { color: #888; margin-top: 15px; font-size: 12px; }
+        body { background-color: #000; color: #fff; font-family: 'Segoe UI', sans-serif; text-align: center; padding-top: 50px; margin: 0; }
+        .container { border: 2px solid #ff0000; padding: 35px; display: inline-block; border-radius: 20px; background: #0a0a0a; box-shadow: 0 0 20px #ff0000; max-width: 90%; }
+        h1 { color: #ff0000; text-transform: uppercase; letter-spacing: 2px; }
+        .status-box { background: #1a1a1a; padding: 15px; border-radius: 10px; margin: 20px 0; border: 1px solid #333; }
+        .status-text { font-size: 22px; font-weight: bold; }
+        .btn { background: #ff0000; color: #fff; padding: 18px 35px; text-decoration: none; font-weight: bold; border-radius: 8px; display: none; margin-top: 20px; font-size: 20px; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        .file-name { color: #888; font-size: 13px; margin-top: 20px; border-top: 1px solid #333; padding-top: 10px; }
+        .instruction { color: #aaa; font-size: 14px; margin-top: 10px; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1 style="color: #00ff00;">KHAN GAMING</h1>
-        <h3>Free Fire Special Config</h3>
-        
-        <p id="msg" class="status">Checking Visits...</p>
+        <h1>Khan Gaming</h1>
+        <p style="color: #00ff00;">Premium Config Downloader</p>
 
-        <a id="downloadBtn" href="APNA_DIRECT_LINK_YAHAN_DALEIN" class="btn">📥 DOWNLOAD FILE NOW</a>
+        <div style="min-height: 100px; margin: 15px 0; border: 1px dashed #444;">
+            <p style="font-size: 12px; color: #555;">Advertisements</p>
+        </div>
 
-        <div class="file-info">
-            File Name: AIMLOCK BRAZILIA NO DRAG AUTO HS...7z<br>
-            Status: Protected by Khan Gaming
+        <div class="status-box">
+            <p id="msg" class="status-text" style="color: #ff0000;">Checking Access...</p>
+            <p id="counter" class="instruction"></p>
+        </div>
+
+        <a id="downloadBtn" href="https://www.mediafire.com/file/6injz4uwsid1og0/AIMLOCK_BRAZILIA_NO_DRAG_AUTO_HS_AIM_AUTO_LENGKET_PALA_WORK_ALL_HP_FF_ORI_%2526_MAX_100%2525_ANTIBAN.7z/file" class="btn">📥 DOWNLOAD NOW</a>
+
+        <div class="file-name">
+            <strong>File:</strong> AIMLOCK BRAZILIA NO DRAG AUTO HS...7z<br>
+            <strong>Version:</strong> Anti-Ban 100% Work
         </div>
     </div>
 
     <script>
-        // Counting visits without changing old files
-        let vCount = localStorage.getItem('khan_file_visits') || 0;
-        vCount = parseInt(vCount) + 1;
-        localStorage.setItem('khan_file_visits', vCount);
+        // Visit counting logic (Safe for old files)
+        let visits = localStorage.getItem('khan_gaming_file_access') || 0;
+        visits = parseInt(visits) + 1;
+        localStorage.setItem('khan_gaming_file_access', visits);
 
         const btn = document.getElementById('downloadBtn');
         const msg = document.getElementById('msg');
+        const countMsg = document.getElementById('counter');
 
-        if (vCount >= 5) {
-            msg.innerHTML = "✅ SUCCESS: File Unlocked!";
+        if (visits >= 5) {
+            msg.innerHTML = "✅ ACCESS GRANTED!";
             msg.style.color = "#00ff00";
             btn.style.display = "inline-block";
+            countMsg.innerHTML = "Aapka download link niche unlock ho gaya hai.";
         } else {
-            msg.innerHTML = "🔒 LOCKED: " + vCount + "/5 Visits Done";
-            msg.innerHTML += "<br><span style='font-size:14px;'>Visit site " + (5 - vCount) + " more times to unlock!</span>";
+            msg.innerHTML = "🔒 ACCESS DENIED!";
+            msg.style.color = "#ff0000";
+            btn.style.display = "none";
+            countMsg.innerHTML = "Aapne " + visits + "/5 visits pure kiye hain.<br>File unlock karne ke liye site ko " + (5 - visits) + " baar aur refresh karein.";
         }
     </script>
 
