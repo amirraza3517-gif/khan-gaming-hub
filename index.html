@@ -3,152 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Gaming News - Khan Hub</title>
+    <title>Gaming News - Khan Gaming Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
     <style>
-        body { background: #f8fafc; color: #334155; font-family: 'Inter', sans-serif; line-height: 1.8; }
-        /* Ad Box Styling for visibility */
-        .ad-box { background: #ffffff; border: 1px solid #e2e8f0; margin: 30px 0; text-align: center; padding: 10px; min-height: 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 8px; position: relative; }
-        .ad-box::before { content: "ADVERTISEMENT"; position: absolute; top: -10px; left: 10px; background: #f1f5f9; padding: 0 10px; font-size: 10px; color: #94a3b8; font-weight: bold; }
-        
-        .article-text p { margin-bottom: 30px; font-size: 18px; text-align: justify; }
-        .btn-main { background: #2563eb; color: white; padding: 20px; border-radius: 8px; font-weight: 900; width: 100%; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+        body { background: #f1f5f9; color: #334155; font-family: 'Georgia', serif; line-height: 2.2; }
+        .ad-unit { background: #fff; border: 1px solid #e2e8f0; margin: 30px 0; text-align: center; padding: 15px; min-height: 280px; display: flex; align-items: center; justify-content: center; border-radius: 8px; position: relative; }
+        .ad-unit::after { content: 'ADVERTISEMENT'; position: absolute; top: 5px; right: 10px; font-size: 10px; color: #cbd5e1; }
+        .article-p { margin-bottom: 40px; font-size: 20px; text-align: justify; }
+        .btn-main { background: #2563eb; color: white; padding: 20px; border-radius: 6px; font-weight: 900; width: 100%; font-size: 1.2rem; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
         .hidden { display: none; }
     </style>
 </head>
 <body>
 
-<nav class="bg-white border-b py-4 px-6 sticky top-0 z-50 shadow-sm flex justify-between items-center">
-    <h1 class="text-xl font-black text-blue-600">KHAN GAMING HUB</h1>
-    <div class="bg-blue-100 text-blue-700 px-4 py-1 rounded-md font-bold text-xs uppercase">Verification Step <span id="sNum">1</span>/10</div>
+<nav class="bg-white border-b py-4 px-6 sticky top-0 z-50 shadow-sm flex justify-between items-center font-sans">
+    <h1 class="text-2xl font-black text-blue-700 italic">KHAN GAMING HUB</h1>
+    <div class="bg-blue-600 text-white px-4 py-1 rounded font-bold text-sm">STEP <span id="sNum">1</span>/10</div>
 </nav>
 
-<div class="max-w-4xl mx-auto mt-6 px-4 pb-20">
+<div class="max-w-4xl mx-auto mt-10 px-4">
     
-    <div class="ad-box">
+    <div class="ad-unit">
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <div class="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-gray-100">
-        <h1 id="newsTitle" class="text-3xl font-black mb-6 text-slate-900 leading-tight">...</h1>
+    <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg border border-gray-100">
+        <h1 id="newsTitle" class="text-3xl md:text-5xl font-black mb-8 text-slate-900 leading-tight">...</h1>
 
-        <div class="bg-blue-50 border-2 border-blue-200 p-8 rounded-xl text-center mb-10">
-            <p class="text-sm font-bold text-blue-500 uppercase mb-2">Step 1: Human Verification</p>
-            <div id="t1" class="text-4xl font-black mb-4">15</div>
-            <button id="scBtn" onclick="revealBottom()" class="hidden btn-main shadow-lg">Verify & Scroll Down</button>
+        <div class="bg-blue-50 border-2 border-dashed border-blue-200 p-10 rounded-2xl text-center mb-10 font-sans">
+            <p id="t1-msg" class="font-bold text-blue-600 uppercase mb-4">Security Verification</p>
+            <div id="t1" class="text-5xl font-black mb-6">15</div>
+            <button id="scBtn" onclick="openBottom()" class="hidden btn-main">Verify & Scroll Down</button>
         </div>
 
-        <div class="ad-box">
+        <div class="ad-unit">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <div class="article-text" id="contentArea">
-            <div id="part1"></div>
-
-            <div class="ad-box">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <div id="articleBody">
             </div>
 
-            <div id="part2"></div>
-
-            <div class="ad-box">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-
-            <div style="height: 500px;" class="flex items-center justify-center text-gray-300 font-bold uppercase italic border-y-2 border-dashed my-10">
-                Continue Scrolling for Next Step...
-            </div>
-
-            <div class="ad-box">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-
-            <div id="part3"></div>
-
-            <div class="ad-box">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-        </div>
-
-        <div id="footerAction" class="mt-20 pt-10 border-t-2 border-gray-100 opacity-20">
-            <div class="ad-box">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-
-            <div id="t2Area" class="hidden text-center bg-gray-50 p-10 rounded-2xl border">
-                <p class="text-xs font-bold text-gray-400 mb-2">GENERATING NEXT STEP LINK</p>
-                <div id="t2" class="text-4xl font-black text-red-500">10</div>
-            </div>
-            <button id="nextBtn" onclick="goNext()" class="hidden btn-main bg-green-600 hover:bg-green-700 mt-4">Continue to Next Step</button>
-        </div>
-
-        <div class="ad-box mt-10">
+        <div class="ad-unit">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
+
+        <div class="ad-unit">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <div style="height: 800px;" class="flex items-center justify-center text-gray-200 italic border-y-2 border-dashed my-10 font-sans font-bold">
+            SCROLL DOWN FOR FINAL STEP...
+        </div>
+
+        <div class="ad-unit">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <div id="bottom-section" class="mt-20 pt-20 border-t-4 opacity-10 font-sans">
+            <div class="ad-unit">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <div id="t2-area" class="hidden bg-gray-50 p-10 rounded-2xl text-center border">
+                <p class="font-bold text-gray-400 mb-2">GENERATING NEXT PAGE...</p>
+                <div id="t2" class="text-4xl font-black text-green-600">10</div>
+            </div>
+            <button id="finalBtn" onclick="nextPage()" class="hidden btn-main bg-green-600 hover:bg-green-700">Continue to Next Step</button>
+            
+            <div class="ad-unit mt-6">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ad-unit">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 </div>
 
 <script>
-    const articles = [
-        {t: "How to Optimize Android for High-End Gaming", c: "Professional gaming on mobile requires more than just skill. You need to tweak your system settings for maximum FPS. Start by enabling Developer Options and reducing window animation scales. This makes the UI feel snappy. Next, use a game booster to clear background RAM. In 2026, many phones come with dedicated gaming chips, but software optimization still plays a huge role in preventing thermal throttling during intense squad fights..."},
-        {t: "The Secret to Perfect Headshots in Battle Royales", c: "Precision is key. Most players fail because they use the default sensitivity. We recommend a general sensitivity of 94 and a 2x scope of 85. This balance allows for quick movement while maintaining control over recoil. Practice in the training grounds for at least 15 minutes before jumping into a rank match. Using a VIP configuration file can also help stabilize your aim-lock, ensuring that your crosshair stays on the target even during fast movements..."},
-        {t: "Why Your Device Lags During Rank Matches", c: "Lag is the biggest enemy of any gamer. It can be caused by either high ping or low device performance. To fix ping, ensure you are on a 5GHz Wi-Fi band. To fix performance, clear your game cache every week. Overheating is another major cause; if your phone gets too hot, the CPU will slow down to protect itself. Using a cooling fan can significantly improve your gameplay experience and keep your frame rate stable at 120FPS or 144FPS..."},
-        // ... (Har step ke liye alag content load hota rahega)
+    const database = [
+        {t: "How AI is Revolutionizing Mobile Gaming in 2026", c: "The landscape of mobile gaming has shifted dramatically this year. With the introduction of local neural processing, games are now able to render complex environments without draining battery. This means players can enjoy high-fidelity graphics on mid-range devices..."},
+        {t: "The Importance of Low-Latency Displays for Pro Gamers", c: "In the world of professional esports, every millisecond counts. A 144Hz display is no longer a luxury but a necessity for anyone looking to compete at a high level. High refresh rates allow for smoother motion tracking and quicker reaction times..."},
+        {t: "Global Security Standards for Third-Party Gaming Tools", c: "With the increase in third-party optimization scripts, security has become a primary concern for the gaming industry. Developers are now implementing more robust encryption methods to protect user data. Our hub ensures that all files are verified..."},
+        // (Is tarah 10 articles ka logic niche cycle hoga)
     ];
 
     const params = new URLSearchParams(window.location.search);
     let s = parseInt(params.get('s')) || 1;
-    document.getElementById('sNum').innerText = s;
-    
-    // Logic for loading different content (Cycle through articles array)
-    let artIdx = (s - 1) % articles.length;
-    document.getElementById('newsTitle').innerText = articles[artIdx].t;
-    document.getElementById('part1').innerHTML = `<p>${articles[artIdx].c}</p><p>${articles[artIdx].c}</p>`;
-    document.getElementById('part2').innerHTML = `<p>${articles[artIdx].c}</p><p>${articles[artIdx].c}</p>`;
-    document.getElementById('part3').innerHTML = `<p>${articles[artIdx].c}</p><p>${articles[artIdx].c}</p>`;
+    let dest = params.get('dest') || "";
 
-    // Timer 1
-    let sec1 = 15;
-    let timer1 = setInterval(() => {
-        sec1--;
-        document.getElementById('t1').innerText = sec1;
-        if(sec1 <= 0) {
-            clearInterval(timer1);
-            document.getElementById('t1').innerText = "READY";
+    document.getElementById('sNum').innerText = s;
+    let artIdx = (s - 1) % database.length;
+    document.getElementById('newsTitle').innerText = database[artIdx].t;
+    
+    let contentHtml = "";
+    for(let i=0; i<8; i++) { contentHtml += `<p class="article-p">${database[artIdx].c}</p>`; }
+    document.getElementById('articleBody').innerHTML = contentHtml;
+
+    let c1 = 15;
+    let it1 = setInterval(() => {
+        c1--;
+        document.getElementById('t1').innerText = c1;
+        if(c1 <= 0) {
+            clearInterval(it1);
             document.getElementById('scBtn').classList.remove('hidden');
         }
     }, 1000);
 
-    function revealBottom() {
-        document.getElementById('footerAction').scrollIntoView({ behavior: 'smooth' });
-        document.getElementById('footerAction').classList.remove('opacity-20');
-        document.getElementById('t2Area').classList.remove('hidden');
-        let sec2 = 10;
-        let timer2 = setInterval(() => {
-            sec2--;
-            document.getElementById('t2').innerText = sec2;
-            if(sec2 <= 0) {
-                clearInterval(timer2);
-                document.getElementById('t2Area').classList.add('hidden');
-                document.getElementById('nextBtn').classList.remove('hidden');
+    function openBottom() {
+        document.getElementById('bottom-section').scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('bottom-section').classList.remove('opacity-10');
+        document.getElementById('t2-area').classList.remove('hidden');
+        let c2 = 10;
+        let it2 = setInterval(() => {
+            c2--;
+            document.getElementById('t2').innerText = c2;
+            if(c2 <= 0) {
+                clearInterval(it2);
+                document.getElementById('t2-area').classList.add('hidden');
+                document.getElementById('finalBtn').classList.remove('hidden');
             }
         }, 1000);
     }
 
-    function goNext() {
-        if(s < 10) window.location.href = `index.html?s=${s+1}`;
-        else window.location.href = "download.html";
+    function nextPage() {
+        if(s < 10) window.location.href = `index.html?s=${s+1}&dest=${encodeURIComponent(dest)}`;
+        else window.location.href = `download.html?url=${encodeURIComponent(dest)}`;
     }
 </script>
-
 </body>
 </html>
