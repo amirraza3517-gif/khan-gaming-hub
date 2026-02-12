@@ -55,7 +55,7 @@
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <div style="height: 800px;" class="flex items-center justify-center text-gray-200 italic border-y-2 border-dashed my-10 font-sans font-bold">
+        <div style="height: 800px;" class="flex items-center justify-center text-gray-200 italic border-y-2 border-dashed my-10 font-sans font-bold text-center">
             SCROLL DOWN FOR FINAL STEP...
         </div>
 
@@ -65,7 +65,6 @@
         </div>
 
         <div id="bottom-section" class="mt-20 pt-20 border-t-4 opacity-10 font-sans">
-            
             <div class="ad-unit">
                 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -91,17 +90,10 @@
 </div>
 
 <script>
-    const database = [
-        {t: "How AI is Revolutionizing Mobile Gaming 2026", c: "Cloud gaming is now more accessible than ever, allowing players to stream high-end titles with zero latency thanks to 5G towers and neural network optimization."},
-        {t: "Thermal Throttling: How to Keep Your Device Cool", c: "Heavy gaming sessions can lead to overheating. Professional gamers use external peltier coolers and customized graphics profiles to maintain stable frames during combat."},
-        {t: "The Best Android Optimizations for 120 FPS", c: "Achieving high frame rates requires tweaking developer options, locking your refresh rate, and clearing system cache partitions frequently for maximum performance."},
-        {t: "Understanding Touch Sampling Rates in eSports", c: "Touch latency is crucial. Modern displays offer up to 720Hz touch sampling, translating every swipe into immediate action without any noticeable delay on the screen."},
-        {t: "Security Protocols for Third-Party File Integrity", c: "When using custom scripts, security must be your top priority. Always ensure files are verified for the current game version to avoid permanent account bans or malware."},
-        {t: "The Future of Ray Tracing on Mobile Platforms", c: "Visual fidelity has reached console levels. Ray tracing adds realistic reflections and lighting, making immersive worlds feel more alive than ever on your smartphone."},
-        {t: "Battery Life Hacks for Hardcore Mobile Gamers", c: "Running games at 120Hz drains battery fast. Using bypass charging features allows you to play while plugged in without damaging the internal lithium-ion cells."},
-        {t: "Global Gaming Trends: Mobile vs. Console in 2026", c: "Mobile gaming has officially surpassed consoles and PCs combined. Developers are now focusing on mobile-first titles for the best gaming experiences right in your pocket."},
-        {t: "How to Build a Professional Mobile Gaming Setup", c: "From thumb sleeves to Wi-Fi 6 routers, every piece of gear matters. A stable connection is the final piece for anyone looking to enter professional mobile eSports."},
-        {t: "Privacy Settings Every Gamer Should Check Now", c: "Data privacy is a huge concern. Audit which apps have access to your location and microphone, and use trusted hubs like ours for the latest and safest gaming updates."}
+    const articles = [
+        {h: "How AI is Revolutionizing Mobile Gaming 2026", p: ["Artificial intelligence is now at the heart of every modern mobile game chipset.","Cloud servers are using neural networks to eliminate input lag for players.","In 2026, AI-driven graphics upscaling allows budget phones to run 4K games.","Security protocols have also improved, using AI to detect and ban hackers instantly.","Adaptive audio technology creates a 3D soundstage based on your environment.","Developers are focusing on procedurally generated worlds that never end.","Battery optimization via AI allows for 10+ hours of continuous gaming sessions.","Mobile eSports is now a billion-dollar industry thanks to global connectivity."]},
+        {h: "Pro Tips for 144Hz Gaming Performance", p: ["Maintaining a stable 144FPS requires deep system-level optimizations on Android.","Thermal management is key; always use an external cooler for long matches.","Touch sampling rates of 720Hz provide near-instant response for pro players.","Clearing background tasks is the first step to unlocking your GPU's potential.","Display calibration helps in spotting enemies hiding in dark shadowed areas.","Using high-speed Wi-Fi 6 routers reduces ping jitter in competitive lobbies.","Sensitivity settings should be customized for each game to build muscle memory.","Always keep your device updated to the latest security patch for stability."]},
+        // Add more articles here if needed
     ];
 
     const params = new URLSearchParams(window.location.search);
@@ -109,13 +101,13 @@
     let dest = params.get('dest') || "";
 
     document.getElementById('sNum').innerText = s;
-    let artIdx = (s - 1) % database.length;
-    document.getElementById('newsTitle').innerText = database[artIdx].t;
+    let idx = (s - 1) % articles.length;
+    document.getElementById('newsTitle').innerText = articles[idx].h;
     
     let contentHtml = "";
-    for(let i=0; i<8; i++) { 
-        contentHtml += `<p class="article-p">${database[artIdx].c} We provide the most reliable gaming news to help you stay ahead of the competition every day.</p>`; 
-    }
+    articles[idx].p.forEach(txt => {
+        contentHtml += `<p class="article-p">${txt} Staying updated with Khan Gaming Hub ensures you never miss a pro-level tip.</p>`;
+    });
     document.getElementById('articleBody').innerHTML = contentHtml;
 
     let c1 = 15;
