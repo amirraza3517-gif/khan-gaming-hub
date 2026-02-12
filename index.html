@@ -3,98 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khan Gaming Hub - Exclusive Rewards</title>
+    <title>Khan Gaming Hub - Step Verification</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
     <style>
-        body { background-color: #f4f7fa; color: #334155; line-height: 1.7; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .content-card { background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; }
-        .ad-placeholder { background: #f8fafc; border: 1px dashed #cbd5e1; padding: 20px; text-align: center; min-height: 250px; display: flex; align-items: center; justify-content: center; margin: 20px 0; border-radius: 8px; }
-        .step-indicator { background: #e0f2fe; color: #0369a1; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 12px; }
-        .btn-next { background: #2563eb; color: white; padding: 16px; border-radius: 8px; font-weight: bold; width: 100%; transition: 0.3s; text-transform: uppercase; }
-        .btn-next:disabled { background: #94a3b8; cursor: not-allowed; }
+        body { background-color: #f3f4f6; color: #334155; font-family: 'Inter', sans-serif; }
+        .main-card { background: white; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .ad-box { background: #f9fafb; border: 1px dashed #d1d5db; min-height: 250px; display: flex; align-items: center; justify-content: center; margin: 20px 0; border-radius: 10px; }
+        .btn-blue { background: #2563eb; color: white; padding: 15px; border-radius: 8px; font-weight: bold; width: 100%; transition: 0.3s; }
+        .btn-blue:disabled { background: #94a3b8; cursor: not-allowed; }
     </style>
 </head>
-<body class="p-4 sm:p-10">
+<body class="p-4 md:p-10">
 
-    <div class="max-w-2xl mx-auto content-card p-6 sm:p-10">
-        <div class="flex justify-between items-center mb-6">
-            <h1 class="font-black text-xl text-blue-600 italic">KHAN GAMING</h1>
-            <span class="step-indicator uppercase" id="stepCounter">Step 1 of 10</span>
+    <div class="max-w-2xl mx-auto main-card p-6 md:p-8">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="font-black text-blue-600 text-lg">KHAN GAMING</h2>
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-bold uppercase" id="stepLabel">Step 1/10</span>
+        </div>
+        <div class="w-full bg-gray-200 h-2 rounded-full mb-6">
+            <div id="progressBar" class="bg-blue-600 h-2 rounded-full" style="width: 10%;"></div>
         </div>
 
-        <div class="ad-placeholder">
+        <div class="ad-box">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <div class="mb-8">
-            <h2 id="artTitle" class="text-2xl font-extrabold text-gray-900 mb-4 leading-tight">Optimizing Your Gaming Sensitivity for 2026</h2>
-            <p id="artBody" class="text-gray-600 text-justify">
-                Loading educational content... Please wait for the verification timer to complete.
-            </p>
+        <article class="prose prose-slate mb-8">
+            <h1 id="title" class="text-2xl font-bold text-gray-900 mb-3">Loading Article...</h1>
+            <p id="content" class="text-gray-600 leading-relaxed text-justify">Please wait while we prepare the next step for you.</p>
+        </article>
+
+        <div class="bg-blue-50 p-6 rounded-2xl text-center border border-blue-100">
+            <p id="waitText" class="text-sm text-gray-500 mb-2 uppercase font-bold tracking-widest">Verify Your Session</p>
+            <div id="timer" class="text-5xl font-black text-blue-600 mb-4">15</div>
+            <button id="nextBtn" disabled class="btn-blue shadow-lg">PLEASE WAIT...</button>
         </div>
 
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 text-center shadow-inner">
-            <div id="timerArea">
-                <p class="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-widest">Verify Your Session</p>
-                <div id="countdown" class="text-5xl font-black text-blue-600 mb-4">15</div>
-            </div>
-            
-            <button id="nextBtn" disabled class="btn-next">
-                Wait for Timer...
-            </button>
-        </div>
-
-        <div class="ad-placeholder mt-8">
+        <div class="ad-box mt-8">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
     </div>
 
     <script>
-        const articles = [
-            { t: "1. The Future of Mobile Gaming", b: "Mobile gaming in 2026 has reached a new peak with cloud integration. Players now demand 120FPS as a standard for competitive play. To achieve this, optimizing your device's background processes is crucial for smooth performance." },
-            { t: "2. Anti-Ban Security Protocols", b: "Security is the top priority for pro players. Using encrypted configuration files ensures that your ID remains safe while testing new sensitivity panels. Always use official sources for your gaming mods." },
-            { t: "3. Best DPI Settings for Headshots", b: "DPI plays a vital role in aim-lock precision. For mobile devices, a DPI range between 400 and 600 is recommended. This allows for quick flick shots without losing control of the recoil." },
-            { t: "4. Understanding Game Engines", b: "Modern games use advanced physics engines to calculate bullet trajectory. Learning how these engines work can help you predict enemy movements better during intense squad fights." },
-            { t: "5. Importance of Refresh Rate", b: "A higher screen refresh rate gives you a millisecond advantage. In 2026, most gaming phones support 144Hz. Combined with our VIP panel, this creates a seamless aiming experience." },
-            { t: "6. Squad Communication Tactics", b: "Communication is key to winning tournaments. Use low-latency voice apps and clear callouts. Pro squads often practice specific rotations to stay inside the zone safely." },
-            { t: "7. Battery Management for Gamers", b: "Long gaming sessions can degrade battery health. Using optimized graphics settings not only keeps the phone cool but also extends the life of your hardware over time." },
-            { t: "8. Global Rewards and Redeem Codes", b: "Each month, developers release secret codes for legendary skins. Keep an eye on our daily updates to claim these rewards before they expire in your region." },
-            { t: "9. Graphics vs. Performance", b: "Most pro players choose 'Smooth' graphics with 'Extreme' frame rates. This reduces visual clutter and makes it easier to spot enemies hiding in the grass or behind structures." },
-            { t: "10. Claim Your VIP Access Now", b: "Congratulations! You have completed all verification steps. Your VIP Headshot Panel and Diamond Codes are now ready for download. Click the button below to proceed to the final link." }
+        // Data for 10 Different Articles
+        const stepData = [
+            { t: "The Evolution of Free Fire Mods", c: "Gaming in 2026 has transformed with new engine updates. Players are now focusing on sensitivity settings and VIP panels to improve their headshot percentage. Proper calibration is key to staying ahead in rank matches." },
+            { t: "Best Sensitivity Settings for Mobile", c: "Achieving the perfect aim requires balancing DPI and in-game sensitivity. For most devices, setting your general sensitivity to 95 and Red Dot to 80 provides a smooth experience for long-range and close combat." },
+            { t: "VIP Panel V2 Security Features", c: "Security is a major concern when using external tools. The latest VIP Panel V2 uses advanced encryption to protect user IDs from detection. Always ensure you are using the anti-ban version for guest logins." },
+            { t: "How to Claim Daily Diamond Codes", c: "Every day, thousands of redeem codes are released globally. These codes offer legendary skins and diamonds. Our hub provides the most updated list of working codes for all regions including India and Brazil." },
+            { t: "Professional Gaming Gear in 2026", c: "Hardware matters as much as skill. Modern gaming phones now come with 144Hz displays. Combined with ultra-low latency triggers, players can execute complex movements with extreme precision." },
+            { t: "Mastering the Gloo Wall Trick", c: "Placing a Gloo Wall in less than 0.5 seconds is a mandatory skill for grandmaster players. Using a 3-finger claw setup helps in faster placement while maintaining movement speed." },
+            { t: "Global Tournament Strategies", c: "In official tournaments, survival is more important than kills. Teams usually rotate early to the center of the zone to avoid getting caught in crossfires during the late-game rotations." },
+            { t: "Optimizing Internet Ping for Gaming", c: "High ping can ruin your gameplay. To reduce lag, always play on a 5GHz Wi-Fi band or use a dedicated gaming VPN that offers low-latency servers near your location." },
+            { t: "Secret Locations in Bermuda Map", c: "Hidden loot spots in Bermuda can give you an early game advantage. Places like the Observatory and Hangar often have high-tier weapons like the M1887 and Groza." },
+            { t: "Final Verification Complete", c: "Congratulations! You have successfully completed all 10 verification steps. Your premium download link is now generated. Click the button below to claim your reward." }
         ];
 
-        let currentStep = 1;
-        const urlParams = new URLSearchParams(window.location.search);
-        currentStep = parseInt(urlParams.get('step')) || 1;
+        // Get Step from URL
+        const params = new URLSearchParams(window.location.search);
+        let currentStep = parseInt(params.get('s')) || 1;
 
-        // Update Content
-        document.getElementById('stepCounter').innerText = `Step ${currentStep} of 10`;
-        document.getElementById('artTitle').innerText = articles[currentStep-1].t;
-        document.getElementById('artBody').innerText = articles[currentStep-1].b;
+        // Update Page Content based on Step
+        document.getElementById('stepLabel').innerText = `Step ${currentStep}/10`;
+        document.getElementById('progressBar').style.width = `${currentStep * 10}%`;
+        document.getElementById('title').innerText = stepData[currentStep-1].t;
+        document.getElementById('content').innerText = stepData[currentStep-1].c;
 
         // Timer Logic
         let timeLeft = 15;
-        const countdownEl = document.getElementById('countdown');
+        const timerEl = document.getElementById('timer');
         const nextBtn = document.getElementById('nextBtn');
 
-        const timer = setInterval(() => {
+        const countdown = setInterval(() => {
             timeLeft--;
-            countdownEl.innerText = timeLeft;
-            if (timeLeft <= 0) {
-                clearInterval(timer);
-                countdownEl.innerText = "READY";
+            timerEl.innerText = timeLeft;
+            if(timeLeft <= 0) {
+                clearInterval(countdown);
+                timerEl.innerText = "READY";
                 nextBtn.disabled = false;
-                nextBtn.innerText = currentStep < 10 ? `Go to Step ${currentStep + 1}` : "Get Final Download Link";
-                nextBtn.style.background = "#059669"; // Success Green
+                nextBtn.innerText = currentStep < 10 ? "CLICK TO CONTINUE" : "GET DOWNLOAD LINK";
+                nextBtn.classList.add('bg-green-600');
                 
                 nextBtn.onclick = () => {
-                    if (currentStep < 10) {
-                        window.location.href = `?step=${currentStep + 1}`;
+                    if(currentStep < 10) {
+                        // REFRESH PAGE WITH NEXT STEP URL
+                        window.location.href = `index.html?s=${currentStep + 1}`;
                     } else {
-                        window.location.href = "download.html"; // Final Destination
+                        window.location.href = "download.html";
                     }
                 };
             }
