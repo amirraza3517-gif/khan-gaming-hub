@@ -3,53 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verification Step 2 - Khan Gaming Hub</title>
+    <title>Verification - Khan Gaming Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
     <style>
-        body { background-color: #0b0e14; color: white; font-family: sans-serif; }
-        .glass { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(59, 130, 246, 0.3); }
+        body { background-color: #ffffff; color: #334155; line-height: 1.6; }
+        .ad-slot { background: #f8fafc; border: 1px solid #e2e8f0; margin: 20px 0; text-align: center; min-height: 250px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #94a3b8; }
+        .article-text { font-size: 16px; margin-bottom: 20px; text-align: justify; }
         .hidden { display: none; }
+        .btn-verify { background: #2563eb; color: white; padding: 15px 30px; border-radius: 5px; font-weight: bold; width: 100%; text-transform: uppercase; }
     </style>
 </head>
-<body class="p-4">
-    <div class="max-w-md mx-auto text-center mt-10">
-        <h2 class="text-xl font-bold text-blue-500 uppercase tracking-tighter">Verification Step 2</h2>
-        
-        <div class="my-6 bg-slate-900/50 p-2 rounded-xl">
+<body class="p-4 sm:p-6">
+
+    <div class="max-w-2xl mx-auto">
+        <h1 class="text-2xl font-bold mb-4 text-gray-900">How to Unlock VIP Gaming Rewards 2026</h1>
+
+        <div class="ad-slot">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <div class="glass p-8 rounded-3xl mb-10">
-            <p id="timerText" class="text-lg">Wait for <span id="seconds" class="text-blue-500 font-bold">15</span> seconds...</p>
-            <p id="scrollText" class="hidden text-green-400 font-bold animate-bounce mt-4">↓ Scroll Down to the Bottom ↓</p>
+        <div class="article-text">
+            Gaming rewards are a great way to enhance your gameplay experience. In 2026, the demand for VIP panels and diamond codes has increased significantly. To ensure you get the working codes, follow our step-by-step verification process.
         </div>
 
-        <div style="height: 600px;"></div>
+        <div id="top-timer" class="bg-blue-50 p-6 rounded-lg text-center border-2 border-blue-200 mb-6">
+            <p id="t1-msg" class="font-bold">Wait for <span id="t1" class="text-blue-600">15</span> seconds to verify...</p>
+            <button id="scrollBtn" onclick="revealBottom()" class="hidden btn-verify mt-2">Click to Continue</button>
+        </div>
 
-        <div class="my-10">
+        <div class="article-text">
+            Many players struggle with anti-ban features. Our latest VIP Panel V2 provides a safe environment for testing sensitivity settings. Make sure your device is updated to the latest OS version for maximum compatibility.
+        </div>
+
+        <div class="ad-slot">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <div id="finalBtnArea" class="hidden pb-20">
-            <a href="https://google.com" class="bg-green-600 px-12 py-5 rounded-2xl font-black text-white uppercase text-xl shadow-lg">Get Link Now</a>
+        <div class="article-text">
+            Redeeming diamonds requires a stable internet connection. If the timer stops, please refresh the page and try again. Our servers are monitored 24/7 to provide you with the best experience.
+        </div>
+
+        <div style="height: 400px;"></div>
+
+        <div id="bottom-section" class="border-t-2 border-dashed pt-10 mb-20 opacity-30">
+            <h3 class="font-bold text-center mb-4 uppercase">Final Destination Below</h3>
+            
+            <div id="final-timer-area" class="hidden text-center bg-green-50 p-6 rounded-xl">
+                <p>Generating your secure link in <span id="t2" class="text-green-600 font-bold">10</span>s...</p>
+            </div>
+
+            <a id="downloadBtn" href="download.html" class="hidden btn-verify block bg-green-600 text-center">📥 DOWNLOAD FILE NOW</a>
         </div>
     </div>
 
     <script>
-        var count = 15;
-        var countdown = setInterval(function() {
-            count--;
-            document.getElementById('seconds').innerHTML = count;
-            if (count <= 0) {
-                clearInterval(countdown);
-                document.getElementById('timerText').innerHTML = "Link is Ready!";
-                document.getElementById('scrollText').classList.remove('hidden');
-                document.getElementById('finalBtnArea').classList.remove('hidden');
+        // Timer 1 logic
+        let count1 = 15;
+        let itv1 = setInterval(() => {
+            count1--;
+            document.getElementById('t1').innerText = count1;
+            if(count1 <= 0) {
+                clearInterval(itv1);
+                document.getElementById('t1-msg').innerText = "Step 1 Verified!";
+                document.getElementById('scrollBtn').classList.remove('hidden');
             }
         }, 1000);
+
+        function revealBottom() {
+            document.getElementById('bottom-section').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('bottom-section').classList.remove('opacity-30');
+            document.getElementById('final-timer-area').classList.remove('hidden');
+            
+            let count2 = 10;
+            let itv2 = setInterval(() => {
+                count2--;
+                document.getElementById('t2').innerText = count2;
+                if(count2 <= 0) {
+                    clearInterval(itv2);
+                    document.getElementById('final-timer-area').innerHTML = "Link Successfully Generated!";
+                    document.getElementById('downloadBtn').classList.remove('hidden');
+                }
+            }, 1000);
+        }
     </script>
 </body>
 </html>
