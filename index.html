@@ -7,64 +7,83 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
     <style>
-        body { background: #f1f5f9; color: #334155; font-family: 'Georgia', serif; line-height: 2.2; }
-        .ad-unit { background: #fff; border: 1px solid #e2e8f0; margin: 30px 0; text-align: center; padding: 15px; min-height: 280px; display: flex; align-items: center; justify-content: center; border-radius: 8px; position: relative; }
-        .ad-unit::after { content: 'ADVERTISEMENT'; position: absolute; top: 5px; right: 10px; font-size: 10px; color: #cbd5e1; }
-        .article-p { margin-bottom: 40px; font-size: 20px; text-align: justify; }
-        .btn-main { background: #2563eb; color: white; padding: 20px; border-radius: 6px; font-weight: 900; width: 100%; font-size: 1.2rem; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
+        body { background: #f8fafc; color: #1e293b; font-family: 'Georgia', serif; line-height: 2.5; }
+        .ad-unit { background: #fff; border: 1px solid #e2e8f0; margin: 40px 0; text-align: center; padding: 20px; min-height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 12px; position: relative; }
+        .ad-unit::after { content: 'ADVERTISEMENT'; position: absolute; top: 10px; right: 15px; font-size: 11px; color: #94a3b8; font-family: sans-serif; }
+        .article-p { margin-bottom: 60px; font-size: 22px; text-align: justify; padding: 0 10px; }
+        .btn-main { background: #1d4ed8; color: white; padding: 25px; border-radius: 10px; font-weight: 900; width: 100%; font-size: 1.4rem; cursor: pointer; transition: 0.4s; text-transform: uppercase; box-shadow: 0 10px 15px -3px rgba(29, 78, 216, 0.3); }
         .hidden { display: none; }
+        /* Page ko lamba karne ke liye extra margin */
+        .spacer { height: 500px; display: flex; align-items: center; justify-content: center; color: #cbd5e1; font-weight: bold; font-style: italic; border-top: 2px dashed #e2e8f0; }
     </style>
 </head>
 <body>
 
-<nav class="bg-white border-b py-4 px-6 sticky top-0 z-50 shadow-sm flex justify-between items-center font-sans">
-    <h1 class="text-2xl font-black text-blue-700 italic">KHAN GAMING HUB</h1>
-    <div class="bg-blue-600 text-white px-4 py-1 rounded font-bold text-sm">STEP <span id="sNum">1</span>/10</div>
+<nav class="bg-white border-b py-5 px-6 sticky top-0 z-50 shadow-md flex justify-between items-center font-sans">
+    <h1 class="text-2xl font-black text-blue-700 tracking-tighter">KHAN GAMING HUB</h1>
+    <div class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold text-sm tracking-widest uppercase">Step <span id="sNum">1</span> of 10</div>
 </nav>
 
-<div class="max-w-4xl mx-auto mt-10 px-4">
+<div class="max-w-4xl mx-auto mt-12 px-5">
+    
     <div class="ad-unit">
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg border border-gray-100">
-        <h1 id="newsTitle" class="text-3xl md:text-5xl font-black mb-8 text-slate-900 leading-tight">...</h1>
+    <div class="bg-white p-10 md:p-16 rounded-3xl shadow-2xl border border-slate-100">
+        <h1 id="newsTitle" class="text-4xl md:text-6xl font-black mb-12 text-slate-900 leading-[1.1]">...</h1>
 
-        <div class="bg-blue-50 border-2 border-dashed border-blue-200 p-10 rounded-2xl text-center mb-10 font-sans">
-            <p id="t1-msg" class="font-bold text-blue-600 uppercase mb-4">Security Verification</p>
-            <div id="t1" class="text-5xl font-black mb-6">15</div>
+        <div class="bg-slate-50 border-4 border-double border-slate-200 p-12 rounded-3xl text-center mb-16">
+            <p class="font-bold text-slate-500 uppercase tracking-widest mb-4">Verifying Connection</p>
+            <div id="t1" class="text-6xl font-black text-blue-600 mb-8">15</div>
             <button id="scBtn" onclick="openBottom()" class="hidden btn-main">Verify & Scroll Down</button>
+        </div>
+
+        <div class="ad-unit">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
         <div id="articleBody"></div>
 
-        <div style="height: 600px;" class="flex items-center justify-center text-gray-200 italic border-y-2 border-dashed my-10 font-sans font-bold">
-            SCROLL DOWN FOR FINAL STEP...
+        <div class="spacer">PLEASE SCROLL DOWN TO PROCEED</div>
+
+        <div class="ad-unit">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <div id="bottom-section" class="mt-20 pt-20 border-t-4 opacity-10 font-sans">
-            <div id="t2-area" class="hidden bg-gray-50 p-10 rounded-2xl text-center border">
-                <p class="font-bold text-gray-400 mb-2">GENERATING NEXT PAGE...</p>
-                <div id="t2" class="text-4xl font-black text-green-600">10</div>
+        <div id="bottom-section" class="mt-20 pt-20 border-t-8 border-slate-50 opacity-10 transition-opacity duration-1000">
+            <div id="t2-area" class="hidden bg-blue-50 p-12 rounded-3xl text-center border-2 border-blue-100">
+                <p class="font-black text-blue-400 mb-4 tracking-widest">PREPARING NEXT STEP...</p>
+                <div id="t2" class="text-5xl font-black text-blue-700">10</div>
             </div>
-            <button id="finalBtn" onclick="nextPage()" class="hidden btn-main bg-green-600 hover:bg-green-700">Continue to Next Step</button>
+            <button id="finalBtn" onclick="nextPage()" class="hidden btn-main bg-green-600 hover:bg-green-700 shadow-green-200">Go to Next Step</button>
         </div>
     </div>
 </div>
 
 <script>
     const database = [
-        { t: "Mobile Gaming Trends 2026", p: ["Cloud gaming is taking over.", "High refresh rates are now standard.", "Haptic feedback has improved drastically.", "5G connectivity has reduced latency issues.", "Mobile eSports are gaining more viewers than PC."] },
-        { t: "Battery Optimization for Gamers", p: ["Stop background apps before playing.", "Use high-performance mode wisely.", "Keep your device cool to avoid throttling.", "Adjust brightness for better visibility.", "Use original chargers for battery health."] },
-        { t: "Advanced Touch Controls Guide", p: ["Custom layout increases speed.", "Gyroscope helps in precision aiming.", "Four-finger claw is the pro standard.", "Sensitivity settings vary by device.", "Practice in training mode daily."] },
-        { t: "The Future of AR in Gaming", p: ["Augmented reality is becoming realistic.", "Interaction with real world is better.", "New AR glasses are being developed.", "Pokemon Go was just the beginning.", "Immersive audio enhances AR experience."] },
-        { t: "Best Budget Gaming Phones 2026", p: ["Mid-range chips are now very powerful.", "Cooling systems are coming to budget phones.", "AMOLED screens are more affordable now.", "Charging speeds have reached 120W.", "Software optimization is key for speed."] },
-        { t: "Security and Fair Play", p: ["Anti-cheat systems are now AI-based.", "Fair play ensures long-term gaming fun.", "Third-party tools can risk your account.", "Always update your game to stay secure.", "Verified files are safer for your device."] },
-        { t: "Audio Design in Modern Games", p: ["Spatial audio helps locate enemies.", "Footstep sounds are more distinct now.", "High-quality headsets make a difference.", "Voice chat latency has been fixed.", "Game soundtracks are like movie scores."] },
-        { t: "Social Features in Mobile Games", p: ["Guilds and clans are more interactive.", "In-game events bring players together.", "Streaming directly from mobile is easy.", "Gifting systems have been improved.", "Cross-platform play is now common."] },
-        { t: "Professional Gaming Gear", p: ["Finger sleeves reduce friction.", "Gaming controllers for mobile are popular.", "External cooling fans keep FPS stable.", "Trigger buttons give a tactical edge.", "Stable internet is the best gear."] },
-        { t: "The Impact of Gaming on Skills", p: ["Fast reaction times help in real life.", "Strategy games improve logic.", "Teamwork is learned through co-op.", "Focus and concentration are enhanced.", "Gaming is a global community now."] }
+        {
+            t: "The Evolution of Neural Processing in Mobile Gaming",
+            p: [
+                "The year 2026 marks a turning point where local artificial intelligence has completely transformed how games are rendered. Unlike previous years, modern chipsets now feature dedicated cores specifically designed for real-time ray tracing on mobile devices. This allows for realistic lighting and shadows that were once only possible on high-end gaming PCs.",
+                "To optimize your device for this new technology, it is essential to manage your thermal threshold settings. When a phone overheats, the CPU automatically slows down to protect the hardware, which causes significant frame drops in heavy games like Genshin Impact or Warzone Mobile. Using an external cooling fan is now a standard practice for professional players.",
+                "Furthermore, software-level optimization plays a huge role. By disabling unnecessary background services and clearing the system's memory cache, you can free up nearly 2GB of RAM that is otherwise wasted on idle tasks. Our hub provides the most stable configuration files to help you achieve a locked 120FPS experience on almost any mid-range smartphone.",
+                "Security is another major pillar of the 2026 gaming era. With the rise of AI-based anti-cheat systems, players must be careful about using unverified scripts. We ensure that every file shared here is thoroughly tested against the latest security signatures to keep your account safe while giving you the performance boost you need."
+            ]
+        },
+        {
+            t: "How High Refresh Rate Displays Change Professional Play",
+            p: [
+                "A few years ago, 60Hz was the standard for all mobile devices, but today, anything less than 144Hz is considered a disadvantage in competitive eSports. The fluidity of motion provided by high refresh rate screens allows gamers to track moving targets with incredible precision, reducing the time it takes to react to an enemy's movement.",
+                "However, having a fast screen is only half the battle. You also need to ensure that your touch sampling rate is equally high. Touch sampling determines how many times per second the screen checks for your finger input. A 480Hz sampling rate combined with a 144Hz refresh rate creates a near-instant response that feels like an extension of your own hand.",
+                "To maintain this level of performance, battery health must be monitored. High refresh rates consume significantly more power, which can lead to faster battery degradation. We recommend using a high-quality bypass charging cable that allows the phone to pull power directly from the wall outlet instead of the battery during long gaming sessions.",
+                "In conclusion, the combination of hardware and software optimization is the only way to reach the top tiers of mobile gaming. Stay tuned to Khan Gaming Hub for the latest updates on how to squeeze every bit of power out of your current device, regardless of its brand or age."
+            ]
+        }
     ];
 
     const params = new URLSearchParams(window.location.search);
@@ -75,9 +94,10 @@
     let artIdx = (s - 1) % database.length;
     document.getElementById('newsTitle').innerText = database[artIdx].t;
     
+    // Injecting Long Content
     let contentHtml = "";
-    database[artIdx].p.forEach(text => {
-        contentHtml += `<p class="article-p">${text} Every gamer knows that performance matters more than anything else when you are in a high-stakes match. With modern technology, we can finally achieve the results we want without lag.</p>`;
+    database[artIdx].p.forEach(para => {
+        contentHtml += `<p class="article-p">${para}</p>`;
     });
     document.getElementById('articleBody').innerHTML = contentHtml;
 
