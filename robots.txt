@@ -1,4 +1,3 @@
-
 User-agent: *
 Allow: /
 Sitemap: https://khan-gaming-hub.vercel.app/sitemap.xml
