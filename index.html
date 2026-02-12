@@ -3,104 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming News & Updates - Khan Gaming</title>
+    <title>Gaming News - Khan Gaming Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
     <style>
-        body { background: #f0f2f5; color: #1a202c; font-family: 'Inter', sans-serif; }
-        .nav-bar { background: #ffffff; border-bottom: 1px solid #e2e8f0; padding: 15px 0; position: sticky; top: 0; z-index: 50; }
-        .main-container { max-width: 1100px; margin: 20px auto; display: grid; grid-template-columns: 1fr 350px; gap: 20px; }
-        @media (max-width: 900px) { .main-container { grid-template-columns: 1fr; } .sidebar { display: none; } }
-        .article-card { background: white; padding: 25px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .ad-slot { background: #fafafa; border: 1px solid #edf2f7; margin: 25px 0; text-align: center; min-height: 280px; display: flex; align-items: center; justify-content: center; }
-        .btn-verify { background: #006aff; color: white; padding: 14px 40px; border-radius: 4px; font-weight: bold; width: 100%; transition: 0.2s; text-transform: uppercase; }
-        .sidebar { background: white; padding: 20px; border-radius: 4px; height: fit-content; position: sticky; top: 85px; }
+        body { background: #f7f9fc; color: #334155; font-family: 'Inter', sans-serif; line-height: 1.8; }
+        .ad-container { background: #fff; border: 1px solid #eee; margin: 30px 0; text-align: center; padding: 15px; min-height: 250px; border-radius: 8px; }
+        .article-body p { margin-bottom: 25px; text-align: justify; font-size: 17px; }
+        .sidebar-item { border-bottom: 1px solid #eee; padding: 12px 0; font-size: 14px; font-weight: 500; color: #475569; cursor: pointer; }
+        .sidebar-item:hover { color: #2563eb; }
+        .btn-verify { background: #2563eb; color: white; padding: 16px 40px; border-radius: 6px; font-weight: 800; width: 100%; text-transform: uppercase; transition: 0.3s; }
         .hidden { display: none; }
+        .step-badge { background: #dbeafe; color: #1e40af; padding: 4px 12px; border-radius: 99px; font-weight: bold; font-size: 12px; }
     </style>
 </head>
-<body class="p-2 sm:p-0">
+<body class="bg-[#f0f2f5]">
 
-    <nav class="nav-bar shadow-sm">
+    <nav class="bg-white border-b sticky top-0 z-50 py-4 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-            <span class="text-2xl font-black text-blue-600 italic">KHAN GAMING HUB</span>
-            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Step <span id="sNum">1</span> of 10</span>
+            <h1 class="text-2xl font-black text-blue-600 italic tracking-tighter">KHAN GAMING HUB</h1>
+            <span class="step-badge uppercase">Process: Step <span id="sNum">1</span>/10</span>
         </div>
     </nav>
 
-    <div class="main-container">
-        <main>
-            <div class="article-card">
-                <div class="ad-slot">
+    <div class="max-w-6xl mx-auto mt-8 px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <div class="lg:col-span-2">
+            <div class="bg-white p-6 sm:p-10 rounded-xl shadow-sm border border-gray-100">
+                
+                <h1 id="artTitle" class="text-3xl sm:text-4xl font-black text-gray-900 mb-6 leading-tight">...</h1>
+
+                <div class="ad-container">
                     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
                     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                 </div>
 
-                <h1 id="artTitle" class="text-3xl font-extrabold mb-4 leading-tight text-gray-900">...</h1>
-                
-                <div class="flex items-center text-gray-400 text-xs mb-6 space-x-4 uppercase font-bold">
-                    <span>By Admin</span> <span>•</span> <span id="dateText">Feb 12, 2026</span> <span>•</span> <span>Gaming News</span>
+                <div class="bg-blue-50 p-8 rounded-2xl border-2 border-blue-100 text-center mb-10">
+                    <p id="t1-msg" class="text-lg font-bold">Verifying your request... <span id="t1" class="text-blue-600">15</span>s</p>
+                    <button id="scBtn" onclick="revealLowerPart()" class="hidden btn-verify mt-4 shadow-xl">Click to Scroll & Verify</button>
                 </div>
 
-                <div class="bg-blue-50 p-8 rounded-lg border-2 border-blue-100 text-center mb-10">
-                    <p id="t1-msg" class="text-gray-600 font-medium">Verification in progress... <span id="t1" class="text-blue-600 font-black">15</span>s</p>
-                    <button id="scBtn" onclick="scrollToBottom()" class="hidden btn-verify mt-2 shadow-lg shadow-blue-200">Click here to Continue</button>
-                </div>
-
-                <div id="artContent" class="text-gray-700 leading-8 text-lg space-y-4 text-justify">
+                <div class="article-body">
+                    <p id="p1"></p>
+                    
+                    <div class="ad-container">
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
+                        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                     </div>
 
-                <div class="ad-slot">
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
+                    <p id="p2"></p>
+                    <p id="p3"></p>
+
+                    <div class="ad-container">
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
+                        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                    </div>
+
+                    <p id="p4"></p>
+                    <div style="height: 600px;"></div> <p id="p5"></p>
+                </div>
+
+                <div id="bottomArea" class="mt-20 border-t-4 border-double pt-12 opacity-10 transition-opacity duration-700">
+                    <div id="t2Area" class="hidden text-center bg-gray-100 p-10 rounded-2xl">
+                        <p class="text-gray-500 font-bold uppercase tracking-widest text-sm mb-2">Almost Done...</p>
+                        <div id="t2" class="text-4xl font-black text-red-600">10s</div>
+                    </div>
+                    <button id="nxBtn" onclick="goNext()" class="hidden btn-verify bg-green-600 hover:bg-green-700 mt-6">Continue to Next Step</button>
+                    <p id="lock" class="text-center text-xs text-gray-400 mt-2 italic">Please finish Step 1 at the top first.</p>
+                </div>
+
+                <div class="ad-container">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
                     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                 </div>
-
-                <div style="height: 400px;"></div>
-
-                <div id="bottomSection" class="border-t pt-10 mt-10 opacity-20 transition-opacity">
-                    <div id="t2Area" class="hidden text-center bg-gray-50 p-10 rounded-xl">
-                        <p class="text-gray-500 italic">Generating final step link...</p>
-                        <div id="t2" class="text-3xl font-black text-red-500 mt-2">10s</div>
-                    </div>
-                    <button id="nxBtn" onclick="nextPage()" class="hidden btn-verify bg-green-600 hover:bg-green-700">Go to Next Step</button>
-                </div>
             </div>
-        </main>
+        </div>
 
-        <aside class="sidebar border border-gray-100 shadow-sm">
-            <h3 class="font-bold border-b pb-2 mb-4 uppercase text-sm tracking-widest text-blue-600">Trending Posts</h3>
-            <ul class="space-y-4 text-sm font-medium text-gray-600">
-                <li class="hover:text-blue-600 cursor-pointer">● How to Fix Lag in Free Fire 2026</li>
-                <li class="hover:text-blue-600 cursor-pointer">● Best Sensitivity for Headshots</li>
-                <li class="hover:text-blue-600 cursor-pointer">● New Diamond Redeem Codes Released</li>
-                <li class="hover:text-blue-600 cursor-pointer">● Top 10 Pro Player Settings</li>
-            </ul>
-            <div class="mt-10 p-4 bg-yellow-50 rounded border border-yellow-100 text-xs text-yellow-700">
-                <strong>Warning:</strong> Don't use Ad-blockers or VPN while verifying your link.
+        <aside class="hidden lg:block">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 sticky top-24">
+                <h3 class="text-blue-600 font-black text-sm uppercase mb-4 border-b pb-2">Trending Now</h3>
+                <div class="sidebar-item">Top 10 Sensitivity Panels 2026</div>
+                <div class="sidebar-item">Free Fire Diamond Hack: The Truth</div>
+                <div class="sidebar-item">How to Fix FPS Drop on Android</div>
+                <div class="sidebar-item">New Anti-Ban Scripts Verified</div>
+                <div class="sidebar-item">Best 120FPS Gaming Phones</div>
+                
+                <div class="mt-8 p-4 bg-red-50 text-red-700 text-xs rounded border border-red-100">
+                    <strong>Note:</strong> Using VPN or multiple tabs will block your IP from accessing the file.
+                </div>
             </div>
         </aside>
     </div>
 
     <script>
-        // Professional Real Articles (High CPC)
         const news = [
-            {t: "Global Esports Tournament 2026 Announced", c: "The international gaming community is buzzing with excitement as the 2026 Esports World Series has been officially announced. Teams from over 50 countries will compete for a massive prize pool. Experts suggest that the mobile gaming category will see the highest viewership in history..."},
-            {t: "New Graphics Engine for Mobile Battle Royales", c: "Developers have unveiled a revolutionary graphics engine designed specifically for mid-range mobile devices. This engine allows for realistic lighting and shadows without affecting the FPS performance. This is a game-changer for players who cannot afford flagship phones..."},
-            {t: "AI Integration in Anti-Cheat Systems", c: "Cheating has been a major problem in competitive gaming, but AI is here to fix it. The new neural network based anti-cheat can detect abnormal movement patterns in real-time, leading to instant bans for hackers. This ensures a fair play environment for everyone..."},
-            {t: "Redefining Mobile Sensitivity Standards", c: "Professional players are shifting towards lower DPI settings to maintain consistency during long-range spray control. Analysis of top-tier gamers shows that a balanced sensitivity allows for better muscle memory development..."},
-            {t: "The Rise of Cloud Gaming Services", c: "Cloud gaming is making high-end PC titles accessible on budget smartphones. With 5G expansion, latency issues are becoming a thing of the past. Services like Google Play Stream are leading the way in this industry shift..."},
-            {t: "Mastering the Art of Zone Rotation", c: "Winning a game isn't just about aim; it's about strategy. Strategic rotations allow teams to secure better positions before the final circle shrinks. Learning the map geometry is essential for any player aiming for the Grandmaster rank..."},
-            {t: "Sustainability in Gaming Hardware", c: "Major manufacturers are now using recycled materials to build gaming consoles and peripherals. This move towards eco-friendly hardware is being welcomed by the global gaming community as they look for greener alternatives..."},
-            {t: "Evolution of Mobile Display Technology", c: "AMOLED displays with 165Hz refresh rates are becoming the new standard. This technology provides vibrant colors and fluid animations, making it easier for gamers to track fast-moving targets during intense battles..."},
-            {t: "Psychology Behind Competitive Gaming", c: "What makes a pro player better than a casual one? It's often the mental resilience and focus. Experts study how top athletes manage stress under pressure, providing insights that can help anyone improve their gaming mindset..."},
-            {t: "Your VIP Access is Ready to Generate", c: "You have successfully navigated through our secure news portal. By engaging with our content, you have verified your identity. Your final download link for the VIP Configuration Panel is ready below. Thank you for your patience..."}
+            {
+                t: "Mastering Professional Sensitivity in 2026 Mobile Gaming",
+                p1: "In the rapidly evolving world of mobile esports, sensitivity settings have become the cornerstone of competitive advantage. As we move through 2026, game engines like Unreal Engine 5 have changed how physics interact with touch inputs. Most players find themselves struggling with recoil patterns that feel more realistic yet unpredictable. To master this, one must understand the relationship between DPI and in-game sensitivity sliders.",
+                p2: "Research shows that 85% of pro players prefer a lower general sensitivity combined with a high red-dot speed. This allows for precision at long ranges while maintaining the ability to react quickly to close-range ambushes. Furthermore, the introduction of 144Hz displays has made even the smallest micro-adjustments visible on screen, necessitating a more refined approach to aim calibration.",
+                p3: "Our VIP panels are specifically designed to bridge this gap. By optimizing the internal configuration files of your device, we can unlock hidden potential in your touch response rate. This isn't just about aiming; it's about the entire tactile experience of the game. When your device is perfectly tuned, every flick shot and drag-headshot feels natural, as if the game is an extension of your own thoughts.",
+                p4: "However, security remains a paramount concern. The gaming industry has seen a massive crackdown on third-party tools. That is why our verification process is so rigorous. By following these 10 steps, you are not only verifying your identity but also allowing our secure server to white-list your session, ensuring that you can use our VIP tools without any fear of account suspension or anti-cheat flags.",
+                p5: "Continue reading below to finalize your configuration. Remember, patience is key in the professional gaming world. Those who take the time to properly set up their environment are the ones who consistently reach the top of the leaderboards season after season. Your final link is being prepared in the background as you engage with this educational content."
+            }
+            // Is tarah 10 articles add kiye ja sakte hain...
         ];
 
         const p = new URLSearchParams(window.location.search);
         let s = parseInt(p.get('s')) || 1;
-
         document.getElementById('sNum').innerText = s;
-        document.getElementById('artTitle').innerText = news[s-1].t;
-        document.getElementById('artContent').innerHTML = `<p>${news[s-1].c}</p><p>As we look further into the future, the integration of haptic feedback and spatial audio will further immerse players into their virtual worlds. Staying updated with these trends is vital for anyone looking to stay at the top of their game.</p>`;
+        document.getElementById('artTitle').innerText = news[0].t + " (Step " + s + ")";
+        document.getElementById('p1').innerText = news[0].p1;
+        document.getElementById('p2').innerText = news[0].p2;
+        document.getElementById('p3').innerText = news[0].p3;
+        document.getElementById('p4').innerText = news[0].p4;
+        document.getElementById('p5').innerText = news[0].p5;
 
         let c1 = 15;
         let it1 = setInterval(() => {
@@ -108,15 +124,16 @@
             document.getElementById('t1').innerText = c1;
             if(c1 <= 0) {
                 clearInterval(it1);
-                document.getElementById('t1-msg').innerHTML = "Ready to proceed!";
+                document.getElementById('t1-msg').innerHTML = "Ready! Proceed to next section.";
                 document.getElementById('scBtn').classList.remove('hidden');
             }
         }, 1000);
 
-        function scrollToBottom() {
-            document.getElementById('bottomSection').scrollIntoView({ behavior: 'smooth' });
-            document.getElementById('bottomSection').classList.remove('opacity-20');
+        function revealLowerPart() {
+            document.getElementById('bottomArea').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('bottomArea').classList.remove('opacity-10');
             document.getElementById('t2Area').classList.remove('hidden');
+            document.getElementById('lock').classList.add('hidden');
             let c2 = 10;
             let it2 = setInterval(() => {
                 c2--;
@@ -129,7 +146,7 @@
             }, 1000);
         }
 
-        function nextPage() {
+        function goNext() {
             if(s < 10) window.location.href = `index.html?s=${s+1}`;
             else window.location.href = "download.html";
         }
