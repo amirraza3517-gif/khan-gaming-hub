@@ -3,132 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khan Gaming - Step Verification</title>
+    <title>Gaming News & Updates - Khan Gaming</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
     <style>
-        body { background: #f0f2f5; color: #333; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
-        .article-card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); margin-bottom: 25px; border-top: 4px solid #2563eb; }
-        .ad-unit { background: #fafafa; border: 1px solid #e5e7eb; margin: 20px 0; text-align: center; min-height: 250px; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-size: 12px; }
-        .btn-action { background: #2563eb; color: white; padding: 14px 28px; border-radius: 6px; font-weight: bold; width: 100%; text-transform: uppercase; transition: 0.3s; }
+        body { background: #f0f2f5; color: #1a202c; font-family: 'Inter', sans-serif; }
+        .nav-bar { background: #ffffff; border-bottom: 1px solid #e2e8f0; padding: 15px 0; position: sticky; top: 0; z-index: 50; }
+        .main-container { max-width: 1100px; margin: 20px auto; display: grid; grid-template-columns: 1fr 350px; gap: 20px; }
+        @media (max-width: 900px) { .main-container { grid-template-columns: 1fr; } .sidebar { display: none; } }
+        .article-card { background: white; padding: 25px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .ad-slot { background: #fafafa; border: 1px solid #edf2f7; margin: 25px 0; text-align: center; min-height: 280px; display: flex; align-items: center; justify-content: center; }
+        .btn-verify { background: #006aff; color: white; padding: 14px 40px; border-radius: 4px; font-weight: bold; width: 100%; transition: 0.2s; text-transform: uppercase; }
+        .sidebar { background: white; padding: 20px; border-radius: 4px; height: fit-content; position: sticky; top: 85px; }
         .hidden { display: none; }
-        .timer-text { font-weight: 800; color: #dc2626; font-size: 1.2rem; }
     </style>
 </head>
-<body class="p-4 md:p-10">
+<body class="p-2 sm:p-0">
 
-    <div class="max-w-2xl mx-auto">
-        <div class="flex justify-between items-center mb-6 bg-white p-4 rounded-lg shadow-sm">
-            <span class="font-black text-blue-600 tracking-tighter text-xl">KHAN GAMING</span>
-            <span id="stepDisplay" class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full font-bold text-sm">Step 1/10</span>
+    <nav class="nav-bar shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <span class="text-2xl font-black text-blue-600 italic">KHAN GAMING HUB</span>
+            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Step <span id="sNum">1</span> of 10</span>
         </div>
+    </nav>
 
-        <div class="ad-unit">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
+    <div class="main-container">
+        <main>
+            <div class="article-card">
+                <div class="ad-slot">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
 
-        <div class="article-card">
-            <h1 id="articleTitle" class="text-2xl font-bold mb-4">Gaming Configuration & Sensitivity</h1>
-            <p id="articleContent" class="text-gray-600 mb-6 leading-relaxed text-justify">
-                Loading secure content for your verification... Please complete the steps below to access the VIP panel.
-            </p>
+                <h1 id="artTitle" class="text-3xl font-extrabold mb-4 leading-tight text-gray-900">...</h1>
+                
+                <div class="flex items-center text-gray-400 text-xs mb-6 space-x-4 uppercase font-bold">
+                    <span>By Admin</span> <span>•</span> <span id="dateText">Feb 12, 2026</span> <span>•</span> <span>Gaming News</span>
+                </div>
 
-            <div id="upper-area" class="text-center p-6 border-2 border-dashed border-gray-200 rounded-xl">
-                <p id="t1-msg">Wait for verification...</p>
-                <div id="t1" class="timer-text my-2">15s</div>
-                <button id="scrollBtn" onclick="scrollToNext()" class="btn-action hidden">Click to Scroll Down</button>
+                <div class="bg-blue-50 p-8 rounded-lg border-2 border-blue-100 text-center mb-10">
+                    <p id="t1-msg" class="text-gray-600 font-medium">Verification in progress... <span id="t1" class="text-blue-600 font-black">15</span>s</p>
+                    <button id="scBtn" onclick="scrollToBottom()" class="hidden btn-verify mt-2 shadow-lg shadow-blue-200">Click here to Continue</button>
+                </div>
+
+                <div id="artContent" class="text-gray-700 leading-8 text-lg space-y-4 text-justify">
+                    </div>
+
+                <div class="ad-slot">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
+
+                <div style="height: 400px;"></div>
+
+                <div id="bottomSection" class="border-t pt-10 mt-10 opacity-20 transition-opacity">
+                    <div id="t2Area" class="hidden text-center bg-gray-50 p-10 rounded-xl">
+                        <p class="text-gray-500 italic">Generating final step link...</p>
+                        <div id="t2" class="text-3xl font-black text-red-500 mt-2">10s</div>
+                    </div>
+                    <button id="nxBtn" onclick="nextPage()" class="hidden btn-verify bg-green-600 hover:bg-green-700">Go to Next Step</button>
+                </div>
             </div>
-        </div>
+        </main>
 
-        <div class="ad-unit">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
-        <div class="article-card italic text-gray-500 text-sm">
-            Note: Do not refresh the page while the timer is running. Make sure your ad-blocker is turned off to prevent verification errors. Our VIP panels are updated daily for 100% anti-ban security.
-        </div>
-
-        <div style="height: 600px;"></div>
-
-        <div id="bottom-marker" class="article-card text-center opacity-30 transition-opacity duration-500">
-            <h2 class="font-bold mb-4">FINAL STEP FOR THIS PAGE</h2>
-            <div id="t2-area" class="hidden">
-                <p>Generating Next Step Link...</p>
-                <div id="t2" class="timer-text my-2">10s</div>
+        <aside class="sidebar border border-gray-100 shadow-sm">
+            <h3 class="font-bold border-b pb-2 mb-4 uppercase text-sm tracking-widest text-blue-600">Trending Posts</h3>
+            <ul class="space-y-4 text-sm font-medium text-gray-600">
+                <li class="hover:text-blue-600 cursor-pointer">● How to Fix Lag in Free Fire 2026</li>
+                <li class="hover:text-blue-600 cursor-pointer">● Best Sensitivity for Headshots</li>
+                <li class="hover:text-blue-600 cursor-pointer">● New Diamond Redeem Codes Released</li>
+                <li class="hover:text-blue-600 cursor-pointer">● Top 10 Pro Player Settings</li>
+            </ul>
+            <div class="mt-10 p-4 bg-yellow-50 rounded border border-yellow-100 text-xs text-yellow-700">
+                <strong>Warning:</strong> Don't use Ad-blockers or VPN while verifying your link.
             </div>
-            <button id="nextStepBtn" onclick="goToNextStep()" class="btn-action hidden bg-green-600">Continue to Next Step</button>
-            <p id="lockMsg" class="text-gray-400 text-xs mt-2">Finish Step 1 first to unlock this button.</p>
-        </div>
-
-        <div class="ad-unit">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
+        </aside>
     </div>
 
     <script>
-        // Article Data for 10 Steps
-        const data = [
-            {t: "1. VIP Sensitivity Settings", c: "Mastering your sensitivity is the first step towards professional gaming. In 2026, many players use custom DPI settings ranging from 410 to 580 to achieve high-speed flick shots."},
-            {t: "2. Anti-Ban Security Protocols", c: "Security is crucial when using VIP Panels. Our system uses advanced encryption to ensure your ID remains safe. Always test on a guest account first for maximum safety."},
-            {t: "3. Best Graphics for 120FPS", c: "To get the best performance, set your graphics to 'Smooth' and your frame rate to 'Extreme'. This reduces lag and provides a competitive advantage in close-range fights."},
-            {t: "4. Global Redeem Codes Today", c: "We update our redeem codes database every 2 hours. These codes provide free skins, diamonds, and emotes. Stay tuned as you complete these verification steps."},
-            {t: "5. Importance of Low Ping", c: "High latency can ruin your gaming experience. Using a gaming VPN or a stable 5GHz Wi-Fi connection can reduce your ping to below 40ms for a lag-free session."},
-            {t: "6. Master the Fast Gloo Wall", c: "The 'sit-up' Gloo Wall trick is essential for survival. Practice your 3-finger claw settings to place walls instantly when you are under enemy fire."},
-            {t: "7. Headshot Optimization Guide", c: "Auto-aim and aim-lock features require precise configuration files. Make sure to download the correct version for your specific Android or iOS device."},
-            {t: "8. Tournament Strategies 2026", c: "Pro teams focus on zone rotations rather than just kills. Survival points are key to ranking up in the Grandmaster tier during the current season."},
-            {t: "9. Device Overheating Solutions", c: "Long gaming sessions can cause thermal throttling. Use a mobile cooling fan or play in a cool environment to maintain stable FPS during squad matches."},
-            {t: "10. Claim Your VIP Rewards", c: "Final verification in progress. You have successfully navigated through our security layers. Your VIP Reward link is ready to be generated below."}
+        // Professional Real Articles (High CPC)
+        const news = [
+            {t: "Global Esports Tournament 2026 Announced", c: "The international gaming community is buzzing with excitement as the 2026 Esports World Series has been officially announced. Teams from over 50 countries will compete for a massive prize pool. Experts suggest that the mobile gaming category will see the highest viewership in history..."},
+            {t: "New Graphics Engine for Mobile Battle Royales", c: "Developers have unveiled a revolutionary graphics engine designed specifically for mid-range mobile devices. This engine allows for realistic lighting and shadows without affecting the FPS performance. This is a game-changer for players who cannot afford flagship phones..."},
+            {t: "AI Integration in Anti-Cheat Systems", c: "Cheating has been a major problem in competitive gaming, but AI is here to fix it. The new neural network based anti-cheat can detect abnormal movement patterns in real-time, leading to instant bans for hackers. This ensures a fair play environment for everyone..."},
+            {t: "Redefining Mobile Sensitivity Standards", c: "Professional players are shifting towards lower DPI settings to maintain consistency during long-range spray control. Analysis of top-tier gamers shows that a balanced sensitivity allows for better muscle memory development..."},
+            {t: "The Rise of Cloud Gaming Services", c: "Cloud gaming is making high-end PC titles accessible on budget smartphones. With 5G expansion, latency issues are becoming a thing of the past. Services like Google Play Stream are leading the way in this industry shift..."},
+            {t: "Mastering the Art of Zone Rotation", c: "Winning a game isn't just about aim; it's about strategy. Strategic rotations allow teams to secure better positions before the final circle shrinks. Learning the map geometry is essential for any player aiming for the Grandmaster rank..."},
+            {t: "Sustainability in Gaming Hardware", c: "Major manufacturers are now using recycled materials to build gaming consoles and peripherals. This move towards eco-friendly hardware is being welcomed by the global gaming community as they look for greener alternatives..."},
+            {t: "Evolution of Mobile Display Technology", c: "AMOLED displays with 165Hz refresh rates are becoming the new standard. This technology provides vibrant colors and fluid animations, making it easier for gamers to track fast-moving targets during intense battles..."},
+            {t: "Psychology Behind Competitive Gaming", c: "What makes a pro player better than a casual one? It's often the mental resilience and focus. Experts study how top athletes manage stress under pressure, providing insights that can help anyone improve their gaming mindset..."},
+            {t: "Your VIP Access is Ready to Generate", c: "You have successfully navigated through our secure news portal. By engaging with our content, you have verified your identity. Your final download link for the VIP Configuration Panel is ready below. Thank you for your patience..."}
         ];
 
-        // URL Step Logic
-        const params = new URLSearchParams(window.location.search);
-        let step = parseInt(params.get('s')) || 1;
+        const p = new URLSearchParams(window.location.search);
+        let s = parseInt(p.get('s')) || 1;
 
-        // Update Page Content
-        document.getElementById('stepDisplay').innerText = `Step ${step}/10`;
-        document.getElementById('articleTitle').innerText = data[step-1].t;
-        document.getElementById('articleContent').innerText = data[step-1].c;
+        document.getElementById('sNum').innerText = s;
+        document.getElementById('artTitle').innerText = news[s-1].t;
+        document.getElementById('artContent').innerHTML = `<p>${news[s-1].c}</p><p>As we look further into the future, the integration of haptic feedback and spatial audio will further immerse players into their virtual worlds. Staying updated with these trends is vital for anyone looking to stay at the top of their game.</p>`;
 
-        // Step 1 Timer (Top)
-        let sec1 = 15;
-        let itv1 = setInterval(() => {
-            sec1--;
-            document.getElementById('t1').innerText = sec1 + "s";
-            if(sec1 <= 0) {
-                clearInterval(itv1);
-                document.getElementById('t1').innerText = "READY";
-                document.getElementById('scrollBtn').classList.remove('hidden');
+        let c1 = 15;
+        let it1 = setInterval(() => {
+            c1--;
+            document.getElementById('t1').innerText = c1;
+            if(c1 <= 0) {
+                clearInterval(it1);
+                document.getElementById('t1-msg').innerHTML = "Ready to proceed!";
+                document.getElementById('scBtn').classList.remove('hidden');
             }
         }, 1000);
 
-        function scrollToNext() {
-            document.getElementById('bottom-marker').scrollIntoView({ behavior: 'smooth' });
-            document.getElementById('bottom-marker').classList.remove('opacity-30');
-            document.getElementById('lockMsg').classList.add('hidden');
-            document.getElementById('t2-area').classList.remove('hidden');
-            
-            // Step 2 Timer (Bottom)
-            let sec2 = 10;
-            let itv2 = setInterval(() => {
-                sec2--;
-                document.getElementById('t2').innerText = sec2 + "s";
-                if(sec2 <= 0) {
-                    clearInterval(itv2);
-                    document.getElementById('t2-area').classList.add('hidden');
-                    document.getElementById('nextStepBtn').classList.remove('hidden');
+        function scrollToBottom() {
+            document.getElementById('bottomSection').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('bottomSection').classList.remove('opacity-20');
+            document.getElementById('t2Area').classList.remove('hidden');
+            let c2 = 10;
+            let it2 = setInterval(() => {
+                c2--;
+                document.getElementById('t2').innerText = c2 + "s";
+                if(c2 <= 0) {
+                    clearInterval(it2);
+                    document.getElementById('t2Area').classList.add('hidden');
+                    document.getElementById('nxBtn').classList.remove('hidden');
                 }
             }, 1000);
         }
 
-        function goToNextStep() {
-            if(step < 10) {
-                window.location.href = `index.html?s=${step + 1}`;
-            } else {
-                window.location.href = "download.html";
-            }
+        function nextPage() {
+            if(s < 10) window.location.href = `index.html?s=${s+1}`;
+            else window.location.href = "download.html";
         }
     </script>
 </body>
