@@ -3,138 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming News Network - Khan Hub</title>
+    <title>Premium Gaming News - Khan Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
     <style>
-        body { background: #f1f5f9; color: #334155; font-family: 'Georgia', serif; line-height: 2.2; }
-        .ad-unit { background: #fff; border: 1px solid #e2e8f0; margin: 40px 0; text-align: center; padding: 20px; min-height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 8px; }
-        .article-p { margin-bottom: 40px; font-size: 20px; text-align: justify; }
-        .btn-verify { background: #2563eb; color: white; padding: 20px; border-radius: 5px; font-weight: 900; width: 100%; font-size: 1.2rem; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
-        .btn-verify:hover { background: #1e40af; }
-        .sidebar { background: white; padding: 25px; border-radius: 10px; position: sticky; top: 100px; border: 1px solid #e2e8f0; }
+        body { background: #f8fafc; color: #334155; font-family: 'Inter', sans-serif; line-height: 1.8; }
+        /* Ad Box Styling for visibility */
+        .ad-box { background: #ffffff; border: 1px solid #e2e8f0; margin: 30px 0; text-align: center; padding: 10px; min-height: 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 8px; position: relative; }
+        .ad-box::before { content: "ADVERTISEMENT"; position: absolute; top: -10px; left: 10px; background: #f1f5f9; padding: 0 10px; font-size: 10px; color: #94a3b8; font-weight: bold; }
+        
+        .article-text p { margin-bottom: 30px; font-size: 18px; text-align: justify; }
+        .btn-main { background: #2563eb; color: white; padding: 20px; border-radius: 8px; font-weight: 900; width: 100%; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
         .hidden { display: none; }
     </style>
 </head>
 <body>
 
 <nav class="bg-white border-b py-4 px-6 sticky top-0 z-50 shadow-sm flex justify-between items-center">
-    <h1 class="text-2xl font-black text-blue-700 italic">KHAN NEWS</h1>
-    <div class="bg-blue-600 text-white px-4 py-1 rounded font-bold text-sm">STEP <span id="sNum">1</span>/10</div>
+    <h1 class="text-xl font-black text-blue-600">KHAN GAMING HUB</h1>
+    <div class="bg-blue-100 text-blue-700 px-4 py-1 rounded-md font-bold text-xs uppercase">Verification Step <span id="sNum">1</span>/10</div>
 </nav>
 
-<div class="max-w-7xl mx-auto mt-10 px-4 grid grid-cols-1 lg:grid-cols-4 gap-10">
+<div class="max-w-4xl mx-auto mt-6 px-4 pb-20">
     
-    <div class="lg:col-span-3 bg-white p-8 md:p-16 rounded-xl shadow-lg">
-        
-        <h1 id="newsTitle" class="text-4xl md:text-6xl font-black mb-10 text-slate-900 leading-tight">...</h1>
+    <div class="ad-box">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
 
-        <div class="ad-unit">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <div class="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-gray-100">
+        <h1 id="newsTitle" class="text-3xl font-black mb-6 text-slate-900 leading-tight">...</h1>
+
+        <div class="bg-blue-50 border-2 border-blue-200 p-8 rounded-xl text-center mb-10">
+            <p class="text-sm font-bold text-blue-500 uppercase mb-2">Step 1: Human Verification</p>
+            <div id="t1" class="text-4xl font-black mb-4">15</div>
+            <button id="scBtn" onclick="revealBottom()" class="hidden btn-main shadow-lg">Verify & Scroll Down</button>
         </div>
 
-        <div class="bg-slate-50 border-2 border-dashed border-blue-200 p-10 rounded-2xl text-center mb-16">
-            <p id="t1-msg" class="text-gray-500 font-bold uppercase tracking-widest mb-4">Establishing Secure Connection...</p>
-            <div id="t1" class="text-4xl font-black text-blue-600 mb-6">15s</div>
-            <button id="scBtn" onclick="openBottom()" class="hidden btn-verify">Scroll Down to Continue</button>
-        </div>
-
-        <div id="articleBody" class="article-p">
-            </div>
-
-        <div class="ad-unit">
+        <div class="ad-box">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <div style="height: 1200px;" class="flex items-center justify-center text-gray-200 italic border-y my-10">
-            Keep scrolling for verification...
-        </div>
+        <div class="article-text" id="contentArea">
+            <div id="part1"></div>
 
-        <div id="bottom-section" class="mt-20 pt-20 border-t-4 opacity-10">
-            <div id="t2-area" class="hidden bg-gray-50 p-12 rounded-3xl text-center border-2 border-green-100">
-                <p class="font-bold text-gray-500 mb-4">PREPARING NEXT PAGE...</p>
-                <div id="t2" class="text-4xl font-black text-green-600">10s</div>
+            <div class="ad-box">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </div>
-            <button id="finalBtn" onclick="nextPage()" class="hidden btn-verify bg-green-600 hover:bg-green-700">Go to Next Step</button>
+
+            <div id="part2"></div>
+
+            <div class="ad-box">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <div style="height: 500px;" class="flex items-center justify-center text-gray-300 font-bold uppercase italic border-y-2 border-dashed my-10">
+                Continue Scrolling for Next Step...
+            </div>
+
+            <div class="ad-box">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <div id="part3"></div>
+
+            <div class="ad-box">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
         </div>
 
-        <div class="ad-unit">
+        <div id="footerAction" class="mt-20 pt-10 border-t-2 border-gray-100 opacity-20">
+            <div class="ad-box">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <div id="t2Area" class="hidden text-center bg-gray-50 p-10 rounded-2xl border">
+                <p class="text-xs font-bold text-gray-400 mb-2">GENERATING NEXT STEP LINK</p>
+                <div id="t2" class="text-4xl font-black text-red-500">10</div>
+            </div>
+            <button id="nextBtn" onclick="goNext()" class="hidden btn-main bg-green-600 hover:bg-green-700 mt-4">Continue to Next Step</button>
+        </div>
+
+        <div class="ad-box mt-10">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
     </div>
-
-    <aside class="hidden lg:block sidebar h-fit">
-        <h3 class="font-black border-b-2 border-blue-600 pb-2 mb-4 uppercase text-sm">Recent News</h3>
-        <div class="space-y-4 text-sm font-bold text-gray-600">
-            <p class="hover:text-blue-600 cursor-pointer">● The Rise of 6G in Gaming</p>
-            <p class="hover:text-blue-600 cursor-pointer">● Best VIP Panels for 2026</p>
-            <p class="hover:text-blue-600 cursor-pointer">● Global Esports Championship</p>
-            <p class="hover:text-blue-600 cursor-pointer">● Mobile Optimization Tips</p>
-        </div>
-    </aside>
 </div>
 
 <script>
-    // 10 UNIQUE LONG ARTICLES
-    const database = [
-        {t: "How AI is Revolutionizing Mobile Gaming in 2026", c: "The landscape of mobile gaming has shifted dramatically this year. With the introduction of local neural processing, games are now able to render complex environments without draining battery. This means players can enjoy high-fidelity graphics on mid-range devices. Furthermore, AI-driven anti-cheat systems are making competitive play fairer than ever before. Experts believe that within the next 24 months, mobile platforms will surpass traditional consoles in total active users. This shift is driving developers to prioritize mobile-first experiences, leading to a golden age of handheld entertainment..."},
-        {t: "The Importance of Low-Latency Displays for Pro Gamers", c: "In the world of professional esports, every millisecond counts. A 144Hz display is no longer a luxury but a necessity for anyone looking to compete at a high level. High refresh rates allow for smoother motion tracking and quicker reaction times. Combined with 5G connectivity, players are experiencing the lowest input lag in history. However, simply having the hardware isn't enough; software optimization is equally critical. Calibration of touch response rates through specialized VIP panels can give you that extra edge needed to win close-range encounters in battle royale games..."},
-        {t: "Global Security Standards for Third-Party Gaming Tools", c: "With the increase in third-party optimization scripts, security has become a primary concern for the gaming industry. Developers are now implementing more robust encryption methods to protect user data. Our hub ensures that all configuration files are verified against the latest anti-cheat signatures. This rigorous verification process is essential to maintain a safe ecosystem. Users are advised to never skip these security steps, as they are designed to white-list your device on our secure servers, preventing any false positive flags from the game's official security monitoring team..."},
-        {t: "Evolution of Cloud Gaming: Play Anything Anywhere", c: "Cloud gaming technology has reached a point where latency is virtually undetectable for the average user. By offloading processing to powerful remote servers, budget smartphones can now run AAA titles at 60FPS. This accessibility is democratizing gaming across the globe. We are seeing a surge in players from emerging markets who can now participate in global tournaments. The future of gaming isn't tied to a specific box; it's tied to the cloud, allowing you to resume your progress on any screen with an internet connection..."},
-        {t: "Mastering Aim Control in Modern Battle Royales", c: "Precision aiming is a skill that takes years to master, but technology can help bridge the gap. Sensitivity settings are the most overlooked aspect of gameplay. Most players stick with default settings, but professional calibration can improve your accuracy by up to 30%. Understanding how DPI interacts with in-game sliders is the first step toward becoming a marksman. Our latest configuration files focus specifically on reducing recoil and stabilizing the reticle during intense firefights. Consistent practice combined with these optimized settings is the secret to reaching the top tiers..."},
-        {t: "The Impact of 5G Expansion on Competitive Play", c: "5G technology has finally become mainstream, and its impact on gaming is nothing short of revolutionary. With download speeds exceeding 1Gbps and ping times dropping below 10ms, the 'lag' excuse is becoming a thing of the past. This stable connection allows for larger-scale matches with up to 200 players in a single arena. Developers are taking advantage of this by creating more detailed maps and more complex destruction physics. As a player, ensuring your device is 5G compatible and correctly configured is vital for maintaining your competitive rank..."},
-        {t: "Why VIP Panels are the New Standard for Enthusiasts", c: "Enthusiast gamers are no longer satisfied with stock performance. They want to squeeze every bit of power out of their hardware. VIP panels provide a centralized interface to manage deep-level system settings that are usually hidden from the user. From GPU overclocking to background process management, these tools provide a tailored experience. Our hub's verification process ensures that these tools are used responsibly and safely. By completing these steps, you gain access to a community of like-minded individuals who are dedicated to reaching the peak of gaming performance..."},
-        {t: "The Psychology of Winning: Mental Health in Esports", c: "Mental resilience is just as important as mechanical skill. Professional teams now employ psychologists to help players manage the stress of high-stakes competition. Burnout is a real threat in the fast-paced world of gaming. Taking regular breaks and maintaining a healthy lifestyle can actually improve your performance more than extra hours of practice. We encourage our users to engage with these verification steps as a way to pace themselves and ensure they are focused and ready for the final file download. A clear mind leads to a clear win..."},
-        {t: "Hardware Trends: What to Expect in Late 2026", c: "The next generation of gaming phones is rumored to feature solid-state batteries and integrated cooling fans. These advancements will solve the two biggest problems for mobile gamers: battery life and thermal throttling. Furthermore, we are seeing the rise of foldable displays that offer a tablet-like experience in a pocketable form factor. This extra screen real estate allows for more complex UI layouts and better visibility during matches. Staying ahead of these hardware trends is crucial for anyone looking to invest in a long-term gaming setup that won't become obsolete in a few months..."},
-        {t: "Final Step: Accessing Your VIP Gaming Rewards", c: "Congratulations on reaching the final stage of our verification process. Your identity has been successfully confirmed, and your secure session is now active. This final article serves as the gateway to your premium gaming files. We hope that the information provided throughout these steps has been valuable to you. By engaging with our news content, you have supported the continued development of these free tools. Click the final button below to proceed to the download page where your personalized VIP panel awaits. Good luck on the battlefield, warrior! Your journey starts here..."}
+    const articles = [
+        {t: "How to Optimize Android for High-End Gaming", c: "Professional gaming on mobile requires more than just skill. You need to tweak your system settings for maximum FPS. Start by enabling Developer Options and reducing window animation scales. This makes the UI feel snappy. Next, use a game booster to clear background RAM. In 2026, many phones come with dedicated gaming chips, but software optimization still plays a huge role in preventing thermal throttling during intense squad fights..."},
+        {t: "The Secret to Perfect Headshots in Battle Royales", c: "Precision is key. Most players fail because they use the default sensitivity. We recommend a general sensitivity of 94 and a 2x scope of 85. This balance allows for quick movement while maintaining control over recoil. Practice in the training grounds for at least 15 minutes before jumping into a rank match. Using a VIP configuration file can also help stabilize your aim-lock, ensuring that your crosshair stays on the target even during fast movements..."},
+        {t: "Why Your Device Lags During Rank Matches", c: "Lag is the biggest enemy of any gamer. It can be caused by either high ping or low device performance. To fix ping, ensure you are on a 5GHz Wi-Fi band. To fix performance, clear your game cache every week. Overheating is another major cause; if your phone gets too hot, the CPU will slow down to protect itself. Using a cooling fan can significantly improve your gameplay experience and keep your frame rate stable at 120FPS or 144FPS..."},
+        // ... (Har step ke liye alag content load hota rahega)
     ];
 
     const params = new URLSearchParams(window.location.search);
     let s = parseInt(params.get('s')) || 1;
     document.getElementById('sNum').innerText = s;
-    document.getElementById('newsTitle').innerText = database[s-1].t;
     
-    // Inject Very Long Content
-    const body = document.getElementById('articleBody');
-    let fullText = `<p class="article-p">${database[s-1].c}</p>`;
-    // Multiplying content to make it 4000+ words like look
-    for(let i=0; i<8; i++) {
-        fullText += `<p class="article-p">${database[s-1].c}</p>`;
-    }
-    body.innerHTML = fullText;
+    // Logic for loading different content (Cycle through articles array)
+    let artIdx = (s - 1) % articles.length;
+    document.getElementById('newsTitle').innerText = articles[artIdx].t;
+    document.getElementById('part1').innerHTML = `<p>${articles[artIdx].c}</p><p>${articles[artIdx].c}</p>`;
+    document.getElementById('part2').innerHTML = `<p>${articles[artIdx].c}</p><p>${articles[artIdx].c}</p>`;
+    document.getElementById('part3').innerHTML = `<p>${articles[artIdx].c}</p><p>${articles[artIdx].c}</p>`;
 
     // Timer 1
-    let c1 = 15;
-    let it1 = setInterval(() => {
-        c1--;
-        document.getElementById('t1').innerText = c1 + "s";
-        if(c1 <= 0) {
-            clearInterval(it1);
-            document.getElementById('t1').innerText = "VERIFIED";
+    let sec1 = 15;
+    let timer1 = setInterval(() => {
+        sec1--;
+        document.getElementById('t1').innerText = sec1;
+        if(sec1 <= 0) {
+            clearInterval(timer1);
+            document.getElementById('t1').innerText = "READY";
             document.getElementById('scBtn').classList.remove('hidden');
         }
     }, 1000);
 
-    function openBottom() {
-        document.getElementById('bottom-section').scrollIntoView({ behavior: 'smooth' });
-        document.getElementById('bottom-section').classList.remove('opacity-10');
-        document.getElementById('t2-area').classList.remove('hidden');
-        let c2 = 10;
-        let it2 = setInterval(() => {
-            c2--;
-            document.getElementById('t2').innerText = c2 + "s";
-            if(c2 <= 0) {
-                clearInterval(it2);
-                document.getElementById('t2-area').classList.add('hidden');
-                document.getElementById('finalBtn').classList.remove('hidden');
+    function revealBottom() {
+        document.getElementById('footerAction').scrollIntoView({ behavior: 'smooth' });
+        document.getElementById('footerAction').classList.remove('opacity-20');
+        document.getElementById('t2Area').classList.remove('hidden');
+        let sec2 = 10;
+        let timer2 = setInterval(() => {
+            sec2--;
+            document.getElementById('t2').innerText = sec2;
+            if(sec2 <= 0) {
+                clearInterval(timer2);
+                document.getElementById('t2Area').classList.add('hidden');
+                document.getElementById('nextBtn').classList.remove('hidden');
             }
         }, 1000);
     }
 
-    function nextPage() {
+    function goNext() {
         if(s < 10) window.location.href = `index.html?s=${s+1}`;
         else window.location.href = "download.html";
     }
