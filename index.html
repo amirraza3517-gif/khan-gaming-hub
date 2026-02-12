@@ -7,36 +7,34 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4112080066147828" crossorigin="anonymous"></script>
     <style>
-        body { background: #f8fafc; color: #1e293b; font-family: 'Georgia', serif; line-height: 2.5; }
-        .ad-unit { background: #fff; border: 1px solid #e2e8f0; margin: 40px 0; text-align: center; padding: 20px; min-height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 12px; position: relative; }
-        .ad-unit::after { content: 'ADVERTISEMENT'; position: absolute; top: 10px; right: 15px; font-size: 11px; color: #94a3b8; font-family: sans-serif; }
-        .article-p { margin-bottom: 60px; font-size: 22px; text-align: justify; padding: 0 10px; }
-        .btn-main { background: #1d4ed8; color: white; padding: 25px; border-radius: 10px; font-weight: 900; width: 100%; font-size: 1.4rem; cursor: pointer; transition: 0.4s; text-transform: uppercase; box-shadow: 0 10px 15px -3px rgba(29, 78, 216, 0.3); }
+        body { background: #f1f5f9; color: #334155; font-family: 'Georgia', serif; line-height: 2.2; }
+        .ad-unit { background: #fff; border: 1px solid #e2e8f0; margin: 30px 0; text-align: center; padding: 15px; min-height: 280px; display: flex; align-items: center; justify-content: center; border-radius: 8px; position: relative; }
+        .ad-unit::after { content: 'ADVERTISEMENT'; position: absolute; top: 5px; right: 10px; font-size: 10px; color: #cbd5e1; }
+        .article-p { margin-bottom: 40px; font-size: 20px; text-align: justify; }
+        .btn-main { background: #2563eb; color: white; padding: 20px; border-radius: 6px; font-weight: 900; width: 100%; font-size: 1.2rem; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
         .hidden { display: none; }
-        /* Page ko lamba karne ke liye extra margin */
-        .spacer { height: 500px; display: flex; align-items: center; justify-content: center; color: #cbd5e1; font-weight: bold; font-style: italic; border-top: 2px dashed #e2e8f0; }
     </style>
 </head>
 <body>
 
-<nav class="bg-white border-b py-5 px-6 sticky top-0 z-50 shadow-md flex justify-between items-center font-sans">
-    <h1 class="text-2xl font-black text-blue-700 tracking-tighter">KHAN GAMING HUB</h1>
-    <div class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold text-sm tracking-widest uppercase">Step <span id="sNum">1</span> of 10</div>
+<nav class="bg-white border-b py-4 px-6 sticky top-0 z-50 shadow-sm flex justify-between items-center font-sans">
+    <h1 class="text-2xl font-black text-blue-700 italic">KHAN GAMING HUB</h1>
+    <div class="bg-blue-600 text-white px-4 py-1 rounded font-bold text-sm">STEP <span id="sNum">1</span>/10</div>
 </nav>
 
-<div class="max-w-4xl mx-auto mt-12 px-5">
+<div class="max-w-4xl mx-auto mt-10 px-4">
     
     <div class="ad-unit">
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <div class="bg-white p-10 md:p-16 rounded-3xl shadow-2xl border border-slate-100">
-        <h1 id="newsTitle" class="text-4xl md:text-6xl font-black mb-12 text-slate-900 leading-[1.1]">...</h1>
+    <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg border border-gray-100">
+        <h1 id="newsTitle" class="text-3xl md:text-5xl font-black mb-8 text-slate-900 leading-tight">...</h1>
 
-        <div class="bg-slate-50 border-4 border-double border-slate-200 p-12 rounded-3xl text-center mb-16">
-            <p class="font-bold text-slate-500 uppercase tracking-widest mb-4">Verifying Connection</p>
-            <div id="t1" class="text-6xl font-black text-blue-600 mb-8">15</div>
+        <div class="bg-blue-50 border-2 border-dashed border-blue-200 p-10 rounded-2xl text-center mb-10 font-sans">
+            <p id="t1-msg" class="font-bold text-blue-600 uppercase mb-4">Security Verification</p>
+            <div id="t1" class="text-5xl font-black mb-6">15</div>
             <button id="scBtn" onclick="openBottom()" class="hidden btn-main">Verify & Scroll Down</button>
         </div>
 
@@ -47,43 +45,38 @@
 
         <div id="articleBody"></div>
 
-        <div class="spacer">PLEASE SCROLL DOWN TO PROCEED</div>
-
         <div class="ad-unit">
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <div id="bottom-section" class="mt-20 pt-20 border-t-8 border-slate-50 opacity-10 transition-opacity duration-1000">
-            <div id="t2-area" class="hidden bg-blue-50 p-12 rounded-3xl text-center border-2 border-blue-100">
-                <p class="font-black text-blue-400 mb-4 tracking-widest">PREPARING NEXT STEP...</p>
-                <div id="t2" class="text-5xl font-black text-blue-700">10</div>
+        <div style="height: 800px;" class="flex items-center justify-center text-gray-200 italic border-y-2 border-dashed my-10 font-sans font-bold">
+            SCROLL DOWN FOR FINAL STEP...
+        </div>
+
+        <div id="bottom-section" class="mt-20 pt-20 border-t-4 opacity-10 font-sans">
+            <div id="t2-area" class="hidden bg-gray-50 p-10 rounded-2xl text-center border">
+                <p class="font-bold text-gray-400 mb-2">GENERATING NEXT PAGE...</p>
+                <div id="t2" class="text-4xl font-black text-green-600">10</div>
             </div>
-            <button id="finalBtn" onclick="nextPage()" class="hidden btn-main bg-green-600 hover:bg-green-700 shadow-green-200">Go to Next Step</button>
+            <button id="finalBtn" onclick="nextPage()" class="hidden btn-main bg-green-600 hover:bg-green-700">Continue to Next Step</button>
         </div>
     </div>
 </div>
 
 <script>
+    // 10 Alag-Alag Articles
     const database = [
-        {
-            t: "The Evolution of Neural Processing in Mobile Gaming",
-            p: [
-                "The year 2026 marks a turning point where local artificial intelligence has completely transformed how games are rendered. Unlike previous years, modern chipsets now feature dedicated cores specifically designed for real-time ray tracing on mobile devices. This allows for realistic lighting and shadows that were once only possible on high-end gaming PCs.",
-                "To optimize your device for this new technology, it is essential to manage your thermal threshold settings. When a phone overheats, the CPU automatically slows down to protect the hardware, which causes significant frame drops in heavy games like Genshin Impact or Warzone Mobile. Using an external cooling fan is now a standard practice for professional players.",
-                "Furthermore, software-level optimization plays a huge role. By disabling unnecessary background services and clearing the system's memory cache, you can free up nearly 2GB of RAM that is otherwise wasted on idle tasks. Our hub provides the most stable configuration files to help you achieve a locked 120FPS experience on almost any mid-range smartphone.",
-                "Security is another major pillar of the 2026 gaming era. With the rise of AI-based anti-cheat systems, players must be careful about using unverified scripts. We ensure that every file shared here is thoroughly tested against the latest security signatures to keep your account safe while giving you the performance boost you need."
-            ]
-        },
-        {
-            t: "How High Refresh Rate Displays Change Professional Play",
-            p: [
-                "A few years ago, 60Hz was the standard for all mobile devices, but today, anything less than 144Hz is considered a disadvantage in competitive eSports. The fluidity of motion provided by high refresh rate screens allows gamers to track moving targets with incredible precision, reducing the time it takes to react to an enemy's movement.",
-                "However, having a fast screen is only half the battle. You also need to ensure that your touch sampling rate is equally high. Touch sampling determines how many times per second the screen checks for your finger input. A 480Hz sampling rate combined with a 144Hz refresh rate creates a near-instant response that feels like an extension of your own hand.",
-                "To maintain this level of performance, battery health must be monitored. High refresh rates consume significantly more power, which can lead to faster battery degradation. We recommend using a high-quality bypass charging cable that allows the phone to pull power directly from the wall outlet instead of the battery during long gaming sessions.",
-                "In conclusion, the combination of hardware and software optimization is the only way to reach the top tiers of mobile gaming. Stay tuned to Khan Gaming Hub for the latest updates on how to squeeze every bit of power out of your current device, regardless of its brand or age."
-            ]
-        }
+        {t: "How AI is Revolutionizing Mobile Gaming 2026", c: "Cloud gaming is now more accessible than ever, allowing players to stream high-end titles directly to their smartphones with zero latency issues. This is all thanks to the expansion of local 5G towers and neural network optimization."},
+        {t: "Thermal Throttling: How to Keep Your Device Cool", c: "Heavy gaming sessions can lead to overheating, which slows down your CPU. To prevent this, professional gamers use external peltier coolers and customized graphics profiles to maintain stable frames during intense combat."},
+        {t: "The Best Android Optimizations for 120 FPS", c: "Achieving high frame rates requires more than just a powerful phone. You need to tweak developer options, lock your refresh rate, and clear system cache partitions frequently to ensure that the hardware is working at 100% capacity."},
+        {t: "Understanding Touch Sampling Rates in eSports", c: "Touch latency can be the difference between winning and losing. Modern displays now offer up to 720Hz touch sampling, which translates every swipe and tap into immediate action without any noticeable delay on the screen."},
+        {t: "Security Protocols for Third-Party File Integrity", c: "When using custom scripts or configuration files, security must be your top priority. Always ensure that the files are verified for the current game version to avoid permanent account bans or malware risks on your personal device."},
+        {t: "The Future of Ray Tracing on Mobile Platforms", c: "Visual fidelity has reached a point where mobile games look almost identical to console games. Ray tracing adds realistic reflections and lighting, making immersive worlds like Cyberpunk or Genshin feel more alive than ever."},
+        {t: "Battery Life Hacks for Hardcore Mobile Gamers", c: "Running games at max brightness and 120Hz will drain your battery in minutes. Using bypass charging features can help you play while plugged in without damaging the internal lithium-ion cells over long-term usage."},
+        {t: "Global Gaming Trends: Mobile vs. Console in 2026", c: "The market share for mobile gaming has officially surpassed consoles and PCs combined. Developers are now focusing on mobile-first titles, ensuring that the best gaming experiences are always available right in your pocket."},
+        {t: "How to Build a Professional Mobile Gaming Setup", c: "From thumb sleeves to high-end headphones, every piece of gear matters. A stable internet connection via a Wi-Fi 6 router is the final piece of the puzzle for anyone looking to enter the world of professional mobile eSports."},
+        {t: "Privacy Settings Every Gamer Should Check Now", c: "Data privacy is becoming a huge concern. Make sure to audit which apps have access to your location and microphone. Always use trusted hubs like ours to get the latest and safest gaming news and updates."}
     ];
 
     const params = new URLSearchParams(window.location.search);
@@ -94,11 +87,12 @@
     let artIdx = (s - 1) % database.length;
     document.getElementById('newsTitle').innerText = database[artIdx].t;
     
-    // Injecting Long Content
+    // Yahan hum lamba content banane ke liye database ke text ko 8 baar likh rahe hain
+    // Isse page ki lambai wahi rahegi jo pehle thi, lekin har page par content alag hoga
     let contentHtml = "";
-    database[artIdx].p.forEach(para => {
-        contentHtml += `<p class="article-p">${para}</p>`;
-    });
+    for(let i=0; i<8; i++) { 
+        contentHtml += `<p class="article-p">${database[artIdx].c} This ensures that you get the most updated information regarding your favorite games every single day.</p>`; 
+    }
     document.getElementById('articleBody').innerHTML = contentHtml;
 
     let c1 = 15;
