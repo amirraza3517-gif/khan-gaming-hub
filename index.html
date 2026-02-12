@@ -23,7 +23,6 @@
 </nav>
 
 <div class="max-w-4xl mx-auto mt-10 px-4">
-    
     <div class="ad-unit">
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
@@ -38,64 +37,34 @@
             <button id="scBtn" onclick="openBottom()" class="hidden btn-main">Verify & Scroll Down</button>
         </div>
 
-        <div class="ad-unit">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
+        <div id="articleBody"></div>
 
-        <div id="articleBody">
-            </div>
-
-        <div class="ad-unit">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
-        <div class="ad-unit">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
-        <div style="height: 800px;" class="flex items-center justify-center text-gray-200 italic border-y-2 border-dashed my-10 font-sans font-bold">
+        <div style="height: 600px;" class="flex items-center justify-center text-gray-200 italic border-y-2 border-dashed my-10 font-sans font-bold">
             SCROLL DOWN FOR FINAL STEP...
         </div>
 
-        <div class="ad-unit">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
         <div id="bottom-section" class="mt-20 pt-20 border-t-4 opacity-10 font-sans">
-            <div class="ad-unit">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="rectangle"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-
             <div id="t2-area" class="hidden bg-gray-50 p-10 rounded-2xl text-center border">
                 <p class="font-bold text-gray-400 mb-2">GENERATING NEXT PAGE...</p>
                 <div id="t2" class="text-4xl font-black text-green-600">10</div>
             </div>
             <button id="finalBtn" onclick="nextPage()" class="hidden btn-main bg-green-600 hover:bg-green-700">Continue to Next Step</button>
-            
-            <div class="ad-unit mt-6">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
         </div>
-    </div>
-    
-    <div class="ad-unit">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4112080066147828" data-ad-slot="1579836906" data-ad-format="auto"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 </div>
 
 <script>
     const database = [
-        {t: "How AI is Revolutionizing Mobile Gaming in 2026", c: "The landscape of mobile gaming has shifted dramatically this year. With the introduction of local neural processing, games are now able to render complex environments without draining battery. This means players can enjoy high-fidelity graphics on mid-range devices..."},
-        {t: "The Importance of Low-Latency Displays for Pro Gamers", c: "In the world of professional esports, every millisecond counts. A 144Hz display is no longer a luxury but a necessity for anyone looking to compete at a high level. High refresh rates allow for smoother motion tracking and quicker reaction times..."},
-        {t: "Global Security Standards for Third-Party Gaming Tools", c: "With the increase in third-party optimization scripts, security has become a primary concern for the gaming industry. Developers are now implementing more robust encryption methods to protect user data. Our hub ensures that all files are verified..."},
-        // (Is tarah 10 articles ka logic niche cycle hoga)
+        { t: "Mobile Gaming Trends 2026", p: ["Cloud gaming is taking over.", "High refresh rates are now standard.", "Haptic feedback has improved drastically.", "5G connectivity has reduced latency issues.", "Mobile eSports are gaining more viewers than PC."] },
+        { t: "Battery Optimization for Gamers", p: ["Stop background apps before playing.", "Use high-performance mode wisely.", "Keep your device cool to avoid throttling.", "Adjust brightness for better visibility.", "Use original chargers for battery health."] },
+        { t: "Advanced Touch Controls Guide", p: ["Custom layout increases speed.", "Gyroscope helps in precision aiming.", "Four-finger claw is the pro standard.", "Sensitivity settings vary by device.", "Practice in training mode daily."] },
+        { t: "The Future of AR in Gaming", p: ["Augmented reality is becoming realistic.", "Interaction with real world is better.", "New AR glasses are being developed.", "Pokemon Go was just the beginning.", "Immersive audio enhances AR experience."] },
+        { t: "Best Budget Gaming Phones 2026", p: ["Mid-range chips are now very powerful.", "Cooling systems are coming to budget phones.", "AMOLED screens are more affordable now.", "Charging speeds have reached 120W.", "Software optimization is key for speed."] },
+        { t: "Security and Fair Play", p: ["Anti-cheat systems are now AI-based.", "Fair play ensures long-term gaming fun.", "Third-party tools can risk your account.", "Always update your game to stay secure.", "Verified files are safer for your device."] },
+        { t: "Audio Design in Modern Games", p: ["Spatial audio helps locate enemies.", "Footstep sounds are more distinct now.", "High-quality headsets make a difference.", "Voice chat latency has been fixed.", "Game soundtracks are like movie scores."] },
+        { t: "Social Features in Mobile Games", p: ["Guilds and clans are more interactive.", "In-game events bring players together.", "Streaming directly from mobile is easy.", "Gifting systems have been improved.", "Cross-platform play is now common."] },
+        { t: "Professional Gaming Gear", p: ["Finger sleeves reduce friction.", "Gaming controllers for mobile are popular.", "External cooling fans keep FPS stable.", "Trigger buttons give a tactical edge.", "Stable internet is the best gear."] },
+        { t: "The Impact of Gaming on Skills", p: ["Fast reaction times help in real life.", "Strategy games improve logic.", "Teamwork is learned through co-op.", "Focus and concentration are enhanced.", "Gaming is a global community now."] }
     ];
 
     const params = new URLSearchParams(window.location.search);
@@ -107,7 +76,9 @@
     document.getElementById('newsTitle').innerText = database[artIdx].t;
     
     let contentHtml = "";
-    for(let i=0; i<8; i++) { contentHtml += `<p class="article-p">${database[artIdx].c}</p>`; }
+    database[artIdx].p.forEach(text => {
+        contentHtml += `<p class="article-p">${text} Every gamer knows that performance matters more than anything else when you are in a high-stakes match. With modern technology, we can finally achieve the results we want without lag.</p>`;
+    });
     document.getElementById('articleBody').innerHTML = contentHtml;
 
     let c1 = 15;
